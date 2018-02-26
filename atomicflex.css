@@ -1,0 +1,1803 @@
+/**************************************************************************************************
+
+Atomic Flex is a CSS framework using "atoms" of "Atomic Design" with the flexibility of flexbox.
+
+Atomic Flex is not a "design system."
+
+Instead, Atomic Flex allows you to prototype any design or concept without writing design CSS.
+
+Use code to sketch or draw prototypes using front-end code.
+
+These are the sections of the CSS
+
+1. Universal reset (essentially no styles)
+2. Colors
+3. Typography (www.modularscale.com)
+3. Elements (forms, images, icons, links, tables, lists)
+5. Positioning
+6. Grid (flexbox)
+7. Utility (layout, margin, padding)
+
+***You could @import this CSS file into a LessCSS file.***
+
+**************************************************************************************************/
+
+/**************************************************************************************************
+1.  RESET
+**************************************************************************************************/
+
+@-ms-viewport {
+    width: device-width;
+}
+
+* {
+    background: none;
+    border: 0;
+    font-style: normal;
+    font-weight: normal;
+    height: auto;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    vertical-align: baseline;
+    width: auto;
+    -webkit-margin-before: 0;
+    -webkit-margin-end: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-padding-before: 0;
+    -webkit-padding-end: 0;
+    -webkit-padding-after: 0;
+    -webkit-padding-start: 0;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+dt,
+dd {
+    display: inline;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+button,
+a {
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+input[type="text"],
+select,
+textarea {
+    -webkit-appearance: none;
+}
+
+
+/**************************************************************************************************
+2.  COLORS (100 - 900) use grayscale, because better to design in value before adding color.
+
+    Uses 10% differences to make value changes more noticiable in the prototype.
+
+    Midtone for this pure grayscale (no hue or saturation, only lightness) is 50% lightness.
+
+    Value for midtone is always 500. The 100-900 value scale does not go pure white or black.
+    There is a 10% variance from pure white or pure black. However, there are instances where
+    pure black and pure white are needed. These are accounted for using -blk or -wht in the
+    CSS class name.
+**************************************************************************************************/
+
+/* background color */
+
+.bck-100 {
+    background: hsl(0, 0, 90%);
+}
+
+.bck-200 {
+    background: hsl(0, 0, 80%);
+}
+
+.bck-300 {
+    background: hsl(0, 0, 70%);
+}
+
+.bck-400 {
+    background: hsl(0, 0, 60%);
+}
+
+.bck-500 {
+    background: hsl(0, 0, 50%);
+}
+
+.bck-600 {
+    background: hsl(0, 0, 40%);
+}
+
+.bck-700 {
+    background: hsl(0, 0, 30%);
+}
+
+.bck-800 {
+    background: hsl(0, 0, 20%);
+}
+
+.bck-900 {
+    background: hsl(0, 0, 10%);
+}
+
+.bck-blk {
+    background: hsl(0, 0, 0);
+}
+
+.bck-wht {
+    background: hsl(0, 0, 100%);
+}
+
+/* border color */
+
+.bdr-100 {
+    border-color: hsl(0, 0, 90%);
+}
+
+.bdr-200 {
+    border-color: hsl(0, 0, 80%);
+}
+
+.bdr-300 {
+    border-color: hsl(0, 0, 70%);
+}
+
+.bdr-400 {
+    border-color: hsl(0, 0, 60%);
+}
+
+.bdr-500 {
+    border-color: hsl(0, 0, 50%);
+}
+
+.bck-600 {
+    background: hsl(0, 0, 40%);
+}
+
+.bdr-700 {
+    border-color: hsl(0, 0, 30%);
+}
+
+.bdr-800 {
+    border-color: hsl(0, 0, 20%);
+}
+
+.bdr-900 {
+    border-color: hsl(0, 0, 10%);
+}
+
+.bdr-blk {
+    border-color: hsl(0, 0, 0);
+}
+
+.bdr-wht {
+    border-color: hsl(0, 0, 100%);
+}
+
+/* text color */
+
+.txt-100 {
+    color: hsl(0, 0, 90%);
+}
+
+.txt-200 {
+    color: hsl(0, 0, 80%);
+}
+
+.txt-300 {
+    color: hsl(0, 0, 70%);
+}
+
+.txt-400 {
+    color: hsl(0, 0, 60%);
+}
+
+.txt-500 {
+    color: hsl(0, 0, 50%);
+}
+
+.txt-600 {
+    color: hsl(0, 0, 40%);
+}
+
+.txt-700 {
+    color: hsl(0, 0, 30%);
+}
+
+.txt-800 {
+    color: hsl(0, 0, 20%);
+}
+
+.txt-900 {
+    color: hsl(0, 0, 10%);
+}
+
+.txt-blk {
+    color: hsl(0, 0, 0);
+}
+
+.txt-wht {
+    color: hsl(0, 0, 100%);
+}
+
+
+/**************************************************************************************************
+2.  TYPOGRAPHY  uses base font size of 16px with 1.5 line height
+**************************************************************************************************/
+
+html {
+    font-size: 16px;
+    color: hsl(0, 0, 10%);
+}
+
+body {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* font size */
+
+.txt_size-alpha {
+    font-size: 1.5rem;
+}
+
+.txt_size-beta {
+    font-size: 1.375rem;
+}
+
+.txt_size-xlg {
+    font-size: 1.250rem;
+}
+
+.txt_size-lg {
+    font-size: 1.125rem;
+}
+
+.txt_size-md {
+    font-size: 1rem;
+}
+
+.txt_size-sm {
+    font-size: 0.875rem;
+}
+
+.txt_size-xsm {
+    font-size: 0.75rem;
+}
+
+/* font appearance */
+
+.txt_weight-bold {
+    font-weight: bold;
+}
+
+.txt_weight-norm {
+    font-weight: normal;
+}
+
+.txt_type-ital {
+    font-style: italic;
+}
+
+.txt_type-up {
+    text-transform: uppercase;
+}
+
+.txt_type-cap {
+    text-transform: capitalize;
+}
+
+.txt_type-low {
+    text-transform: lowercase;
+}
+
+/* font position */
+
+.txt_pos-left {
+    text-align: left;
+}
+
+.txt_pos-center {
+    text-align: center;
+}
+
+.txt_pos-right {
+    text-align: right;
+}
+
+/* type scale */
+
+.txt_scale-fifth {
+    line-height: 1.5;
+}
+
+.txt_scale-fourth {
+    line-height: 1.4;
+}
+
+.txt_scale-half {
+    line-height: 1.2;
+}
+
+
+/**************************************************************************************************
+3.  ELEMENTS (forms, images, icons, links, tables, lists)
+**************************************************************************************************/
+
+/* forms */
+
+.form_grp {
+    width: 100%;
+}
+
+.form_grp-horz .form_item {
+    display: inline-block;
+}
+
+.form_grp-vert .form_item {
+    display: block;
+}
+
+.form_item {
+    padding: .5rem;
+}
+
+.form_label {
+    font-size: 1rem;
+}
+
+.form_input {
+    background: #fff;
+    width: 100%;
+    border: 1px solid hsl(0, 0, 40%);
+    border-radius: 3px;
+}
+
+/* images */
+
+.img_auto {
+    height: auto;
+    width: auto;
+}
+
+.img_w-rwd {
+    height: auto;
+    max-width: 100%;
+}
+
+.img_h-rwd {
+    max-height: 100%;
+    width: auto;
+}
+
+/* icons */
+
+.ico_grp {
+    width: 100%;
+}
+
+.ico_grp-horz .ico_item {
+    display: inline-block;
+}
+
+.ico_grp-vert .ico_item {
+    display: block;
+}
+
+.ico_item {
+    padding: .25rem;
+}
+
+.ico_label {
+    font-size: 1rem;
+}
+
+.icon {
+    height: auto;
+    width: auto;
+}
+
+/* links */
+
+.link_grp {
+    width: 100%;
+}
+
+.link_grp-horz .link_item {
+    display: inline-block;
+}
+
+.link_grp-vert .link_item {
+    display: block;
+}
+
+.link_item {
+    padding: .5rem;
+}
+
+.link_icon {
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.link_label {
+    display: inline-block;
+    font-size: 1rem;
+}
+
+/* tables */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    font-size: 1rem;
+    padding: .5rem;
+}
+
+th {
+    font-weight: bold;
+}
+
+td {
+    font-size: 0.875rem;
+}
+
+.tbl_ladder td {
+    border-bottom: 1px solid hsl(0, 0, 50%);
+}
+
+.tbl_ladder th,
+.tbl_zebra th,
+.tbl_ladder tfoot td,
+.tbl_zebra tfoot td {
+    background: hsl(0, 0, 80%);
+}
+
+.tbl_zebra tbody tr:nth-child(even) {
+    background: hsl(0, 0, 90%);
+}
+
+/* lists */
+
+li {
+    font-size: 1rem;
+    padding: 0 1rem;
+    margin: .5rem 0;
+}
+
+.list_horz li {
+    display: inline-block;
+    margin-right: -4px;
+}
+
+.list_vert li {
+    display: block;
+}
+
+.list_ladder li {
+    border-bottom: 1px solid hsl(0, 0, 50%);
+}
+
+.list_zebra li:nth-child(even) {
+    background: hsl(0, 0, 90%);
+}
+
+
+/**************************************************************************************************
+3.  POSITIONING (absolute and fixed)
+**************************************************************************************************/
+
+.pos_relative {
+    position: relative;
+}
+
+/* absolute (positioned based on current parent "position: relative" container) */
+
+.pos_absolute-t {
+    position: absolute;
+    top: 0;
+}
+
+.pos_absolute-tl {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.pos_absolute-tr {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.pos_absolute-b {
+    position: absolute;
+    bottom: 0;
+}
+
+.pos_absolute-bl {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.pos_absolute-br {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.pos_absolute-l {
+    position: absolute;
+    left: 0;
+}
+
+.pos_absolute-r {
+    position: absolute;
+    right: 0;
+}
+
+
+/* fixed (positioned based on HTML container) */
+
+.pos_fixed-t {
+    position: fixed;
+    top: 0;
+}
+
+.pos_fixed-tl {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.pos_fixed-tr {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.pos_fixed-b {
+    position: fixed;
+    bottom: 0;
+}
+
+.pos_fixed-bl {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.pos_fixed-br {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.pos_fixed-l {
+    position: fixed;
+    left: 0;
+}
+
+.pos_fixed-r {
+    position: fixed;
+    right: 0;
+}
+
+/* z-index (layer of HTML elements positioned absolute or fixed) */
+
+.z_layer-1 {
+    z-index: 100;
+}
+
+.z_layer-2 {
+    z-index: 200;
+}
+
+.z_layer-3 {
+    z-index: 300;
+}
+
+.z_layer-4 {
+    z-index: 400;
+}
+
+.z_layer-5 {
+    z-index: 500;
+}
+
+.z_layer-6 {
+    z-index: 600;
+}
+
+.z_layer-7 {
+    z-index: 700;
+}
+
+.z_layer-8 {
+    z-index: 800;
+}
+
+.z_layer-9 {
+    z-index: 900;
+}
+
+
+/**************************************************************************************************
+4.  GRID (flexbox)
+**************************************************************************************************/
+
+/* flexbox */
+
+.flex_container {
+    display: -webkit-flex;
+    display: flex;
+    /* default values (no need to include but good to know for container behavior) */
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+    -webkit-align-content: stretch;
+    align-content: stretch;
+}
+
+/* flexbox container properties */
+
+.flex_row-dir--xy {
+    /* flex items flow left-to-right */
+    -webkit-flex-direction: row;
+    flex-direction: row;
+}
+
+.flex_row-dir--yx {
+    /* flex items flow right-to-left */
+    -webkit-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+
+.flex_col-dir--tb {
+    /* flex items flow top-to-bottom */
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+.flex_col-dir--bt {
+    /* flex items flow bottom-to-top */
+    -webkit-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+}
+
+.flex_row-wrap--none {
+    /* flex items do not wrap, but continue to scale in size to fit row  */
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}
+
+.flex_row-wrap--xy {
+    /* flex items will wrap from left-to-right  */
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.flex_row-wrap--yx {
+    /* flex items will wrap from right to left  */
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.flex_justify-start {
+    /* flex items align to the left side of the row */
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+}
+
+.flex_justify-end {
+    /* flex items align to the right side of the row */
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+}
+
+.flex_justify-center {
+    /* flex items align to the center of the row */
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.flex_justify-between {
+    /* flex items align with equal spacing between them on the row */
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+.flex_justify-around {
+    /* flex items align with equal spacing around them on the row */
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+}
+
+.flex_align-stretch {
+    /* flex items fill the whole container height from start (top) to end (bottom) */
+    -webkit-align-items: stretch;
+    align-items: stretch;
+}
+
+.flex_align-start {
+    /* flex items align to the start (top) of the flex container */
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+}
+
+.flex_align-end {
+    /* flex items align to the end (bottom) of the flex container */
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+}
+
+.flex_align-center {
+    /* flex items align to the center (middle) of the flex container */
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.flex_content-stretch {
+    /* Flex items align with distributed (not equal) space for wrapped flex items */
+    -webkit-align-content: stretch;
+    align-content: stretch;
+}
+
+.flex_content-start {
+    /* Flex items stack (no spacing) aligned with start (top) for wrapped flex items */
+    -webkit-align-content: flex-start;
+    align-content: flex-start;
+}
+
+.flex_content-end {
+    /* Flex items stack (no spacing) aligned with end (bottom) for wrapped flex items */
+    -webkit-align-content: flex-end;
+    align-content: flex-end;
+}
+
+.flex_content-center {
+    /* Flex items stack aligned with center (middle) for wrapped flex items */
+    -webkit-align-content: center;
+    align-content: center;
+}
+
+.flex_content-between {
+    /* Flex items align with equal spacing between wrapped flex items */
+    -webkit-align-content: space-between;
+    align-content: space-between;
+}
+
+.flex_content-around {
+    /* Flex items align with equal spacing for all wrapped flex items */
+    -webkit-align-content: space-around;
+    align-content: space-around;
+}
+
+/* flexbox item properties */
+
+.flex_item-order {
+    /* Re-order flex items in without restructuring the HTML code (default value is 0) */
+    -webkit-order: 0;
+    order: 0;
+}
+
+.flex_item-grow {
+    /* determines how much a flex item will grow relative to the other flex items in the
+    flex container when positive free space is distributed (default value is 0).
+    If all items use same value (1), then all items display the same size. Only when
+    values (1,3,1,1,2) are different will the larger value items display bigger than
+    the other flex items in the flex container. (CANNOT USE NEGATIVE NUMBERS) */
+    -webkit-flex-grow: 0;
+    flex-grow: 0;
+}
+
+.flex_item-shrink {
+    /* determines how much a flex item will grow relative to the other flex items in the
+    flex container when negative free space is distributed (default value is 1 and 0 is no shrink). */
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+}
+
+.flex_item-basis {
+    /* Uses same values as the width and height properties. Specifies initial size of flex item before
+    distribution of flexbox free space (default value is auto). Used for flexbox grid column item sizes */
+    -webkit-flex-basis: auto;
+    flex-basis: auto;
+}
+
+.flex_item-self {
+    /* This align-self property allows for individual flex items to display an alignment property different
+    than the flex container's alignment properties (default is auto -- no override to container) */
+    -webkit-align-self: auto;
+    align-self: auto;
+}
+
+.flex_item-self--stretch {
+    -webkit-align-self: stretch;
+    align-self: stretch;
+}
+
+.flex_item-self--start {
+    -webkit-align-self: flex-start;
+    align-self: flex-start;
+}
+
+.flex_item-self--end {
+    -webkit-align-self: flex-end;
+    align-self: flex-end;
+}
+
+.flex_item-self--center {
+    -webkit-align-self: center;
+    align-self: center;
+}
+
+/* flexbox grid columns are used in a .flexbox_container and are percentage sizes only based on 12 column grid */
+
+.flex_col-1 {
+    -webkit-flex-basis: 8.333333%;
+    flex-basis: 8.333333%;
+}
+
+.flex_col-2 {
+    -webkit-flex-basis: 16.666667%;
+    flex-basis: 16.666667%;
+}
+
+.flex_col-3 {
+    -webkit-flex-basis: 25%;
+    flex-basis: 25%;
+}
+
+.flex_col-4 {
+    -webkit-flex-basis: 33.333333%;
+    flex-basis: 33.333333%;
+}
+
+.flex_col-5 {
+    -webkit-flex-basis: 41.666667%;
+    flex-basis: 41.666667%;
+}
+
+.flex_col-6 {
+    -webkit-flex-basis: 50%;
+    flex-basis: 50%;
+}
+
+.flex_col-7 {
+    -webkit-flex-basis: 58.333333%;
+    flex-basis: 58.333333%;
+}
+
+.flex_col-8 {
+    -webkit-flex-basis: 66.666667%;
+    flex-basis: 66.666667%;
+}
+
+.flex_col-9 {
+    -webkit-flex-basis: 75%;
+    flex-basis: 75%;
+}
+
+.flex_col-10 {
+    -webkit-flex-basis: 83.333333%;
+    flex-basis: 83.333333%;
+}
+
+.flex_col-11 {
+    -webkit-flex-basis: 91.666667;
+    flex-basis: 91.666667;
+}
+
+.flex_col-12 {
+    -webkit-flex-basis: 100%;
+    flex-basis: 100%;
+}
+
+
+/**************************************************************************************************
+4.  UTILITY (layout, padding, margin, border)
+**************************************************************************************************/
+
+/* column size offsets using padding instead of margins because of box-sizing: border-box */
+
+.off_right-1 {
+    padding-right: 8.333333%;
+}
+
+.off_left-1 {
+    padding-left: 8.333333%;
+}
+
+.off_right-2 {
+    padding-right: 16.666667%;
+}
+
+.off_left-2 {
+    padding-left: 16.666667%;
+}
+
+.off_right-3 {
+    padding-right: 25%;
+}
+
+.off_left-3 {
+    padding-left: 25%;
+}
+
+.off_right-4 {
+    padding-right: 33.333333%;
+}
+
+.off_left-4 {
+    padding-left: 33.333333%;
+}
+
+.off_right-5 {
+    padding-right: 41.666667%;
+}
+
+.off_left-5 {
+    padding-left: 41.666667%;
+}
+
+.off_right-6 {
+    padding-right: 50%;
+}
+
+.off_left-6 {
+    padding-left: 50%;
+}
+
+.off_right-7 {
+    padding-right: 58.333333%;
+}
+
+.off_left-7 {
+    padding-left: 58.333333%;
+}
+
+.off_right-8 {
+    padding-right: 66.666667%;
+}
+
+.off_left-8 {
+    padding-left: 66.666667%;
+}
+
+.off_right-9 {
+    padding-right: 75%;
+}
+
+.off_left-9 {
+    padding-left: 75%;
+}
+
+.off_right-10 {
+    padding-right: 83.333333%;
+}
+
+.off_left-10 {
+    padding-left: 83.333333%;
+}
+
+.off_right-11 {
+    padding-right: 91.666667%;
+}
+
+.off_left-11 {
+    padding-left: 91.666667%;
+}
+
+
+/* other layout helpers */
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clear,
+.clear:before,
+.clear:after {
+    clear: both;
+}
+
+.d-none {
+    display: none;
+}
+
+.d-inline {
+    display: inline-block;
+}
+
+.d-block {
+    display: block;
+}
+
+.d-hide {
+    visibility: hidden;
+}
+
+.d-visible {
+    visibility: visible;
+}
+
+.over-hidden {
+    overflow: hidden;
+}
+
+.over-visible {
+    overflow: visible;
+}
+
+.over-auto {
+    overflow: auto;
+}
+
+
+/* padding helpers (.25rem increments) | "xy" is for left/right
+because letter "l" can be confused for number "1" */
+
+.pd-1 {
+    padding: .25rem;
+}
+
+.pd-2 {
+    padding: .5rem;
+}
+
+.pd-3 {
+    padding: .75rem;
+}
+
+.pd-4 {
+    padding: 1rem;
+}
+
+.pd-5 {
+    padding: 1.25rem;
+}
+
+.pd-6 {
+    padding: 1.5rem;
+}
+
+.pd-7 {
+    padding: 1.75rem;
+}
+
+.pd-8 {
+    padding: 2rem;
+}
+
+/**********************/
+
+.pd_xy-1 {
+    padding: 0 .25rem;
+}
+
+.pd_xy-2 {
+    padding: 0 .5rem;
+}
+
+.pd_xy-3 {
+    padding: 0 .75rem;
+}
+
+.pd_xy-4 {
+    padding: 0 1rem;
+}
+
+.pd_xy-5 {
+    padding: 0 1.25rem;
+}
+
+.pd_xy-6 {
+    padding: 0 1.5rem;
+}
+
+.pd_xy-7 {
+    padding: 0 1.75rem;
+}
+
+.pd_xy-8 {
+    padding: 0 2rem;
+}
+
+/**********************/
+
+.pd_tb-1 {
+    padding: .25rem 0;
+}
+
+.pd_tb-2 {
+    padding: .5rem 0;
+}
+
+.pd_tb-3 {
+    padding: .75rem 0;
+}
+
+.pd_tb-4 {
+    padding: 1rem 0;
+}
+
+.pd_tb-5 {
+    padding: 1.25rem 0;
+}
+
+.pd_tb-6 {
+    padding: 1.5rem 0;
+}
+
+.pd_tb-7 {
+    padding: 1.75rem 0;
+}
+
+.pd_tb-8 {
+    padding: 2rem 0;
+}
+
+/**********************/
+
+.pd_x-1 {
+    padding-left: .25rem;
+}
+
+.pd_x-2 {
+    padding-left: .5rem;
+}
+
+.pd_x-3 {
+    padding-left: .75rem;
+}
+
+.pd_x-4 {
+    padding-left: 1rem;
+}
+
+.pd_x-5 {
+    padding-left: 1.25rem;
+}
+
+.pd_x-6 {
+    padding-left: 1.5rem;
+}
+
+.pd_x-7 {
+    padding-left: 1.75rem;
+}
+
+.pd_x-8 {
+    padding-left: 2rem;
+}
+
+/**********************/
+
+.pd_y-1 {
+    padding-right: .25rem;
+}
+
+.pd_y-2 {
+    padding-right: .5rem;
+}
+
+.pd_y-3 {
+    padding-right: .75rem;
+}
+
+.pd_y-4 {
+    padding-right: 1rem;
+}
+
+.pd_y-5 {
+    padding-right: 1.25rem;
+}
+
+.pd_y-6 {
+    padding-right: 1.5rem;
+}
+
+.pd_y-7 {
+    padding-right: 1.75rem;
+}
+
+.pd_y-8 {
+    padding-right: 2rem;
+}
+
+/**********************/
+
+.pd_t-1 {
+    padding-top: .25rem;
+}
+
+.pd_t-2 {
+    padding-top: .5rem;
+}
+
+.pd_t-3 {
+    padding-top: .75rem;
+}
+
+.pd_t-4 {
+    padding-top: 1rem;
+}
+
+.pd_t-5 {
+    padding-top: 1.25rem;
+}
+
+.pd_t-6 {
+    padding-top: 1.5rem;
+}
+
+.pd_t-7 {
+    padding-top: 1.75rem;
+}
+
+.pd_t-8 {
+    padding-top: 2rem;
+}
+
+/**********************/
+
+.pd_b-1 {
+    padding-bottom: .25rem;
+}
+
+.pd_b-2 {
+    padding-bottom: .5rem;
+}
+
+.pd_b-3 {
+    padding-bottom: .75rem;
+}
+
+.pd_b-4 {
+    padding-bottom: 1rem;
+}
+
+.pd_b-5 {
+    padding-bottom: 1.25rem;
+}
+
+.pd_b-6 {
+    padding-bottom: 1.5rem;
+}
+
+.pd_b-7 {
+    padding-bottom: 1.75rem;
+}
+
+.pd_b-8 {
+    padding-bottom: 2rem;
+}
+
+
+/* margin helpers (.25rem increments) | "xy" is for left/right
+because letter "l" can be confused for number "1" */
+
+.mg-1 {
+    margin: .25rem;
+}
+
+.mg-2 {
+    margin: .5rem;
+}
+
+.mg-3 {
+    margin: .75rem;
+}
+
+.mg-4 {
+    margin: 1rem;
+}
+
+.mg-5 {
+    margin: 1.25rem;
+}
+
+.mg-6 {
+    margin: 1.5rem;
+}
+
+.mg-7 {
+    margin: 1.75rem;
+}
+
+.mg-8 {
+    margin: 2rem;
+}
+
+/**********************/
+
+.mg_xy-1 {
+    margin: 0 .25rem;
+}
+
+.mg_xy-2 {
+    margin: 0 .5rem;
+}
+
+.mg_xy-3 {
+    margin: 0 .75rem;
+}
+
+.mg_xy-4 {
+    margin: 0 1rem;
+}
+
+.mg_xy-5 {
+    margin: 0 1.25rem;
+}
+
+.mg_xy-6 {
+    margin: 0 1.5rem;
+}
+
+.mg_xy-7 {
+    margin: 0 1.75rem;
+}
+
+.mg_xy-8 {
+    margin: 0 2rem;
+}
+
+/**********************/
+
+.mg_tb-1 {
+    margin: .25rem 0;
+}
+
+.mg_tb-2 {
+    margin: .5rem 0;
+}
+
+.mg_tb-3 {
+    margin: .75rem 0;
+}
+
+.mg_tb-4 {
+    margin: 1rem 0;
+}
+
+.mg_tb-5 {
+    margin: 1.25rem 0;
+}
+
+.mg_tb-6 {
+    margin: 1.5rem 0;
+}
+
+.mg_tb-7 {
+    margin: 1.75rem 0;
+}
+
+.mg_tb-8 {
+    margin: 2rem 0;
+}
+
+/**********************/
+
+.mg_x-1 {
+    margin-left: .25rem;
+}
+
+.mg_x-2 {
+    margin-left: .5rem;
+}
+
+.mg_x-3 {
+    margin-left: .75rem;
+}
+
+.mg_x-4 {
+    margin-left: 1rem;
+}
+
+.mg_x-5 {
+    margin-left: 1.25rem;
+}
+
+.mg_x-6 {
+    margin-left: 1.5rem;
+}
+
+.mg_x-7 {
+    margin-left: 1.75rem;
+}
+
+.mg_x-8 {
+    margin-left: 2rem;
+}
+
+/**********************/
+
+.mg_y-1 {
+    margin-right: .25rem;
+}
+
+.mg_y-2 {
+    margin-right: .5rem;
+}
+
+.mg_y-3 {
+    margin-right: .75rem;
+}
+
+.mg_y-4 {
+    margin-right: 1rem;
+}
+
+.mg_y-5 {
+    margin-right: 1.25rem;
+}
+
+.mg_y-6 {
+    margin-right: 1.5rem;
+}
+
+.mg_y-7 {
+    margin-right: 1.75rem;
+}
+
+.mg_y-8 {
+    margin-right: 2rem;
+}
+
+/**********************/
+
+.mg_t-1 {
+    margin-top: .25rem;
+}
+
+.mg_t-2 {
+    margin-top: .5rem;
+}
+
+.mg_t-3 {
+    margin-top: .75rem;
+}
+
+.mg_t-4 {
+    margin-top: 1rem;
+}
+
+.mg_t-5 {
+    margin-top: 1.25rem;
+}
+
+.mg_t-6 {
+    margin-top: 1.5rem;
+}
+
+.mg_t-7 {
+    margin-top: 1.75rem;
+}
+
+.mg_t-8 {
+    margin-top: 2rem;
+}
+
+/**********************/
+
+.mg_b-1 {
+    margin-bottom: .25rem;
+}
+
+.mg_b-2 {
+    margin-bottom: .5rem;
+}
+
+.mg_b-3 {
+    margin-bottom: .75rem;
+}
+
+.mg_b-4 {
+    margin-bottom: 1rem;
+}
+
+.mg_b-5 {
+    margin-bottom: 1.25rem;
+}
+
+.mg_b-6 {
+    margin-bottom: 1.5rem;
+}
+
+.mg_b-7 {
+    margin-bottom: 1.75rem;
+}
+
+.mg_b-8 {
+    margin-bottom: 2rem;
+}
+
+
+/* borders sizes (colors are within the color section) */
+
+.bdr_size-1 {
+    border-width: 1px;
+}
+
+.bdr_size-2 {
+    border-width: 2px;
+}
+
+.bdr_size-3 {
+    border-width: 3px;
+}
+
+.bdr_size-4 {
+    border-width: 4px;
+}
+
+/***************************/
+
+.bdr_size-1--top {
+    border-top-width: 1px;
+}
+
+.bdr_size-2--top {
+    border-top-width: 2px;
+}
+
+.bdr_size-3--top {
+    border-top-width: 3px;
+}
+
+.bdr_size-4--top {
+    border-top-width: 4px;
+}
+
+/***************************/
+
+.bdr_size-1--right {
+    border-right-width: 1px;
+}
+
+.bdr_size-2--right {
+    border-right-width: 2px;
+}
+
+.bdr_size-3--right {
+    border-right-width: 3px;
+}
+
+.bdr_size-4--right {
+    border-right-width: 4px;
+}
+
+/***************************/
+
+.bdr_size-1--bottom {
+    border-bottom-width: 1px;
+}
+
+.bdr_size-2--bottom {
+    border-bottom-width: 2px;
+}
+
+.bdr_size-3--bottom {
+    border-bottom-width: 3px;
+}
+
+.bdr_size-4--bottom {
+    border-bottom-width: 4px;
+}
+
+/***************************/
+
+.bdr_size-1--left {
+    border-left-width: 1px;
+}
+
+.bdr_size-2--left {
+    border-left-width: 2px;
+}
+
+.bdr_size-3--left {
+    border-left-width: 3px;
+}
+
+.bdr_size-4--left {
+    border-left-width: 4px;
+}
+
+
+/* border radius */
+
+.bdr_radius-1 {
+    border-radius: 4px;
+}
+
+.bdr_radius-2 {
+    border-radius: 8px;
+}
+
+.bdr_radius-3 {
+    border-radius: 16px;
+}
+
+.bdr_radius-4 {
+    border-radius: 32px;
+}
+
+.bdr_radius-5 {
+    border-radius: 25%;
+}
+
+.bdr_radius-6 {
+    border-radius: 50%;
+}
+
+.bdr_radius-7 {
+    border-radius: 100%;
+}
+
+/************************/
+
+.bdr_radius-1--txy {
+    border-radius: 4px 4px 0 0;
+}
+
+.bdr_radius-2--txy {
+    border-radius: 8px 8px 0 0;
+}
+
+.bdr_radius-3--txy {
+    border-radius: 16px 16px 0 0;
+}
+
+.bdr_radius-4--txy {
+    border-radius: 32px 32px 0 0;
+}
+
+.bdr_radius-5--txy {
+    border-radius: 25% 25% 0 0;
+}
+
+.bdr_radius-6--txy {
+    border-radius: 50% 50% 0 0;
+}
+
+/************************/
+
+.bdr_radius-1--bxy {
+    border-radius: 0 0 4px 4px;
+}
+
+.bdr_radius-2--bxy {
+    border-radius: 0 0 8px 8px;
+}
+
+.bdr_radius-3--bxy {
+    border-radius: 0 0 16px 16px;
+}
+
+.bdr_radius-4--bxy {
+    border-radius: 0 0 32px 32px;
+}
+
+.bdr_radius-5--bxy {
+    border-radius: 0 0 25% 25%;
+}
+
+.bdr_radius-6--bxy {
+    border-radius: 0 0 50% 50%;
+}
+
+/************************/
+
+.bdr_radius-1--xtb {
+    border-radius: 4px 0 0 4px;
+}
+
+.bdr_radius-2--xtb {
+    border-radius: 8px 0 0 8px;
+}
+
+.bdr_radius-3--xtb {
+    border-radius: 16px 0 0 16px;
+}
+
+.bdr_radius-4--xtb {
+    border-radius: 32px 0 0 32px;
+}
+
+.bdr_radius-5--xtb {
+    border-radius: 25% 0 0 25%;
+}
+
+.bdr_radius-6--xtb {
+    border-radius: 50% 0 0 50%;
+}
+
+/************************/
+
+.bdr_radius-1--ytb {
+    border-radius: 0 4px 4px 0;
+}
+
+.bdr_radius-2--ytb {
+    border-radius: 0 8px 8px 0;
+}
+
+.bdr_radius-3--ytb {
+    border-radius: 0 16px 16px 0;
+}
+
+.bdr_radius-4--ytb {
+    border-radius: 0 32px 32px 0;
+}
+
+.bdr_radius-5--ytb {
+    border-radius: 0 25% 25% 0;
+}
+
+.bdr_radius-6--ytb {
+    border-radius: 0 50% 50% 0;
+}
