@@ -17,4 +17,4 @@ These are the sections of the CSS
 6. Grid (flexbox)
 7. Utility (layout, margin, padding)
 
-***You could @import this CSS file into a LessCSS file.***
+*You could @import this CSS file into a LessCSS file.
