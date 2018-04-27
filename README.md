@@ -16,5 +16,6 @@ These are the sections of the CSS
 5. Positioning
 6. Grid (flexbox)
 7. Utility (layout, margin, padding)
+8. Visual accent utility (borders, dropshadows, transparency)
 
 *You could @import this CSS file into a LessCSS file.
