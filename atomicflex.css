@@ -18,7 +18,6 @@ These are the sections of the CSS
 6. Grid (flexbox)
 7. Layout utility (layout, margin, padding)
 8. Visual accent utility (borders, dropshadows, transparency)
-9. Motion utility (transformations and animations)
 
 
 *** You could @import this CSS file into a LessCSS file ***
@@ -2761,7 +2760,3 @@ mg_y-0 {
 .trans-100 {
     opacity: 1 !important;
 }
-
-/**************************************************************************************************
-9.  MOTION UTILITY (transformations and animations)
-**************************************************************************************************/
