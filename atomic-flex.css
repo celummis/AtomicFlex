@@ -131,7 +131,7 @@ textarea {
 
 /* background primary hue */
 
-.bgp-p100 {
+.bg-p100 {
     background: hsl(200, 100%, 90%);
 }
 
@@ -500,7 +500,7 @@ body {
     font-weight: 800;
 }
 
-.txt-ital {
+.txt-italic {
     font-style: italic;
 }
 
@@ -512,7 +512,7 @@ body {
     text-transform: uppercase;
 }
 
-.txt-cap {
+.txt-capital {
     text-transform: capitalize;
 }
 
