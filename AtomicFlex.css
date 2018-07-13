@@ -40,6 +40,7 @@ These are the sections of the CSS
     margin: 0;
     padding: 0;
     outline: 0;
+    text-decoration: none;
     vertical-align: baseline;
     width: auto;
     -webkit-margin-before: 0;
@@ -65,10 +66,6 @@ These are the sections of the CSS
 
 html {
     overflow-y: scroll;
-}
-
-a {
-    text-decoration: none;
 }
 
 img {
@@ -127,6 +124,14 @@ textarea {
 
     When creating the gradations, stop when the color percentage is too close to black
     or too close to white.
+
+    bg-p(#), txt-p(#): primary
+    bg-s(#), txt-s(#): secondary
+    bg-a(#), txt-a(#): accent
+    bg-g(#), txt-g(#): grayscale
+    bg-wht, txt-wht: white
+    bg-blk, txt-blk: black
+
 **************************************************************************************************/
 
 /* background primary hue */
