@@ -1,0 +1,36 @@
+@-ms-viewport {
+  width: device-width;
+}
+
+* {
+  background: none;
+  border: 0;
+  font-style: normal;
+  font-weight: normal;
+  height: auto;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  vertical-align: baseline;
+  width: auto;
+  -webkit-margin-before: 0;
+  -webkit-margin-end: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0;
+  -webkit-padding-start: 0;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
