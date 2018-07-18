@@ -42,8 +42,8 @@
 
 $primary: hsl(200, 100%, 50%);
 $secondary: hsl(40, 100%, 50%);
-$black: #000;
-$white: #fff;
+$black: hsl(0, 0, 0);
+$white: hsl(0, 0, 100%);
 
 /**************************************************************************************************
     TYPOGRAPHY: base font of 16px and 1.5 line height
@@ -533,7 +533,7 @@ $xlg : 64px;
     } @else if $direction == bottom {
         border-bottom: $size $type $color;
     } @else {
-        border: none;
+        border: 0 none transparent;
     }
 } /* @include border($direction, $size, $type, $color); */
 
@@ -549,7 +549,7 @@ $xlg : 64px;
     } @else if $direction == bottom-right {
         border-bottom-right-radius: $size;
     } @else {
-        border: none;
+        border: 0;
     }
 } /* @include radius($direction, $size); */
 
