@@ -51,7 +51,7 @@
 /* scroll overflow */
 /* @include space($type, $direction, $amount); */
 /**************************************************************************************************
-    VISUAL ACCENTS: borders, shadows and opacity
+    VISUAL ACCENTS: backgrounds, borders, shadows and opacity
 **************************************************************************************************/
 /* @include border($direction, $size, $type, $color); */
 /* @include radius($direction, $size); */
