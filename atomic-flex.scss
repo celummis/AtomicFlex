@@ -113,16 +113,14 @@ $base-scale: 1.5;
         white-space: pre-wrap;
     } @else if $value == break-word {
         word-wrap: break-word;
+    } @else if $value == truncate {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     } @else {
         white-space: $value;
         word-wrap: $value;
     }
-}
-
-%txt-truncate {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
 }
 
 /**************************************************************************************************
@@ -376,48 +374,10 @@ $base-scale: 1.5;
     @include flex-basis($value);
 }
 
-/* width helper override */
-@mixin width($value: auto) {
-    @if $value == w-100 {
-        width: 100% !important;
-    } @else if $value == w-95 {
-        width: 95% !important;
-    } @else if $value == w-90 {
-        width: 90% !important;
-    } @else if $value == w-85 {
-        width: 85% !important;
-    } @else if $value == w-80 {
-        width: 80% !important;
-    } @else if $value == w-75 {
-        width: 75% !important;
-    } @else if $value == w-70 {
-        width: 70% !important;
-    } @else if $value == w-65 {
-        width: 65% !important;
-    } @else if $value == w-60 {
-        width: 60% !important;
-    } @else if $value == w-55 {
-        width: 55% !important;
-    } @else if $value == w-50 {
-        width: 50% !important;
-    } @else if $value == w-45 {
-        width: 45% !important;
-    } @else if $value == w-40 {
-        width: 40% !important;
-    } @else if $value == w-35 {
-        width: 35% !important;
-    } @else if $value == w-30 {
-        width: 30% !important;
-    } @else if $value == w-25 {
-        width: 25% !important;
-    } @else if $value == w-20 {
-        width: 20% !important;
-    } @else if $value == w-15 {
-        width: 15% !important;
-    } @else if $value == w-10 {
-        width: 10% !important;
-    } @else if $value == w-5 {
-        width: 5% !important;
+/* width helper */
+@mixin width($value) {
+    @if $value == auto {
+        width: auto;
     } @else {
         width: $value;
     }
@@ -479,13 +439,7 @@ $base-scale: 1.5;
     }
 }
 
-$xs: 4px;
-$sm: 8px;
-$med: 16px;
-$lg: 32px;
-$xlg : 64px;
-
-@mixin space($type: margin, $direction: all, $amount: $med) {
+@mixin space($type: margin, $direction: all, $amount: 0) {
 	@if $type == padding {
 		@if $direction == all {
 			padding: $amount;
