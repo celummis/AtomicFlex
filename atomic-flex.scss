@@ -1,6 +1,28 @@
 // _atomic-flex.scss
 
 /**************************************************************************************************
+    VARIABLES
+**************************************************************************************************/
+
+/* colors: use lighten or darken to change color value */
+$primary: hsl(200, 100%, 50%);
+$secondary: hsl(40, 100%, 50%);
+$black: hsl(0, 0, 0);
+$white: hsl(0, 0, 100%);
+
+/* base typography */
+$base-font: Arial, Helvetica, sans-serif;
+$base-size: 16px;
+$base-scale: 1.5;
+
+/* spacing */
+$xs: 4px;
+$sm: 8px;
+$med: 16px;
+$lg: 32px;
+$xlg: 64px;
+
+/**************************************************************************************************
     RESET: only used in reset
 **************************************************************************************************/
 @mixin universal-reset {
@@ -39,10 +61,10 @@
 }
 
 @mixin html-reset {
-    html {
-        font-size: 100%;
-        overflow-y: scroll;
-    }
+    font-size: 100%;
+    overflow-y: scroll;
+    font-size: $base-size;
+    line-height: $base-scale;
     
     img {
         vertical-align: middle;
@@ -84,27 +106,11 @@
     }
 }
 
-/**************************************************************************************************
-    COLORS: use lighten() or darken() Sass to control color value
-**************************************************************************************************/
 
-$primary: hsl(200, 100%, 50%);
-$secondary: hsl(40, 100%, 50%);
-$black: hsl(0, 0, 0);
-$white: hsl(0, 0, 100%);
 
 /**************************************************************************************************
     TYPOGRAPHY: base font of 16px and 1.5 line height
 **************************************************************************************************/
-
-$base-size: 16px;
-$base-scale: 1.5;
-
-%font {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: $base-size;
-    line-height: $base-scale;
-}
 
 @function calculate-font($size) {
 	$font-size: $size/$base-size;
@@ -410,13 +416,7 @@ $base-scale: 1.5;
     @include flex-content();
 }
 
-@mixin flex-column {
-    @include flex-grow();
-    @include flex-shrink();
-    @include flex-basis();
-}
-
-@mixin flex-size($value) {
+@mixin flex-column($value) {
     @include flex-grow();
     @include flex-shrink();
     @include flex-basis($value);
@@ -513,7 +513,9 @@ $base-scale: 1.5;
 			margin-right: $amount
 		} @else if $direction == bottom {
 			margin-bottom: $amount
-		} @else {
+        } @else if $direction == auto {
+            margin: 0 auto;
+        } @else {
             margin: 0;
         }
 	}
