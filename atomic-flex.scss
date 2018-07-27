@@ -582,8 +582,28 @@ $xlg: 64px;
     LISTS AND TABLES
 **************************************************************************************************/
 
-@mixin list-table-style($type: none, $alt: table) {
-    @if $type == ladder {
+@mixin list-style($value: none) {
+    @if $value == bullet { 
+        list-style: disc;
+    } @else if $value == ladder {
+        @include border(bottom, 1px, solid, #000000);
+    } @else if $value == ladder-dotted {
+        @include border(bottom, 1px, dotted, #000000);
+    } @else if $value == zebra {
+        table li:nth-child(even) td {
+            background: #000000;
+        }
+    } @else {
+        @include border();
+        list-style: none;
+        background: none;
+    }
+}
+
+@mixin list-table-style($type: none, $alt: list, $list-style: bullet) {
+    @if $type == bullet {
+        list-style: $list-style;
+    } @else if $type == ladder {
         @include border(bottom, 1px, solid, #000000);
     } @else if $type == ladder-dotted {
         @include border(bottom, 1px, dotted, #000000);
