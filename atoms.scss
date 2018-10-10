@@ -1,58 +1,418 @@
+// _atoms.scss
 
-/* colors: use lighten or darken to change color value */
-$primary: hsl(200, 100%, 50%);
-$secondary: hsl(40, 100%, 50%);
-$black: hsl(0, 0, 0);
-$white: hsl(0, 0, 100%);
+@import "reset";
+@import "variables";
+@import "mixins";
 
-/* typography */
-$base-font: Arial, Helvetica, sans-serif;
-$base-size: 16px;
-$base-scale: 1.5;
-
-@function calculate-font($size) {
-	$font-size: $size/$base-size;
-	@return $font-size * 1rem;
+/* colors - background */
+.bg-p100 {
+  background: lighten($primary, 40%);
 }
 
-/* spacing */
-$xs: 4px;
-$sm: 8px;
-$md: 16px;
-$lg: 32px;
-$xlg: 64px;
+.bg-p200 {
+  background: lighten($primary, 30%);
+}
 
-/* columns */
-$col-1: 8.33%;
-$col-2: 16.66%;
-$col-3: 25%;
-$col-4: 33.33%;
-$col-5: 41.66%;
-$col-6: 50%;
-$col-7: 58.33%;
-$col-8: 66.66%;
-$col-9: 75%;
-$col-10: 83.33%;
-$col-11: 91.66%;
-$col-12: 100%;
+.bg-p300 {
+  background: lighten($primary, 20%);
+}
 
-/* percentages */
-$size-10: 10%;
-$size-15: 15%;
-$size-20: 20%;
-$size-25: 25%;
-$size-30: 30%;
-$size-35: 35%;
-$size-40: 40%;
-$size-45: 45%;
-$size-50: 50%;
-$size-55: 55%;
-$size-60: 60%;
-$size-65: 65%;
-$size-70: 70%;
-$size-75: 75%;
-$size-80: 80%;
-$size-85: 85%;
-$size-90: 90%;
-$size-95: 95%;
-$size-100: 100%;
+.bg-p400 {
+  background: lighten($primary, 10%);
+}
+
+.bg-p500 {
+  background: $primary;
+}
+
+.bg-p600 {
+  background: darken($primary, 10%);
+}
+
+.bg-p700 {
+  background: darken($primary, 20%);
+}
+
+.bg-p800 {
+  background: darken($primary, 30%);
+}
+
+.bg-p900 {
+  background: darken($primary, 40%);
+}
+
+.bg-s100 {
+  background: lighten($secondary, 40%);
+}
+
+.bg-s200 {
+  background: lighten($secondary, 30%);
+}
+
+.bg-s300 {
+  background: lighten($secondary, 20%);
+}
+
+.bg-s400 {
+  background: lighten($secondary, 10%);
+}
+
+.bg-s500 {
+  background: $secondary;
+}
+
+.bg-s600 {
+  background: darken($secondary, 10%);
+}
+
+.bg-s700 {
+  background: darken($secondary, 20%);
+}
+
+.bg-s800 {
+  background: darken($secondary, 30%);
+}
+
+.bg-s900 {
+  background: darken($secondary, 40%);
+}
+
+.bg-s100 {
+  background: lighten($grayscale, 40%);
+}
+
+.bg-s200 {
+  background: lighten($grayscale, 30%);
+}
+
+.bg-s300 {
+  background: lighten($grayscale, 20%);
+}
+
+.bg-s400 {
+  background: lighten($grayscale, 10%);
+}
+
+.bg-s500 {
+  background: $grayscale;
+}
+
+.bg-s600 {
+  background: darken($grayscale, 10%);
+}
+
+.bg-s700 {
+  background: darken($grayscale, 20%);
+}
+
+.bg-s800 {
+  background: darken($grayscale, 30%);
+}
+
+.bg-s900 {
+  background: darken($grayscale, 40%);
+}
+
+/* colors - txt */
+.txt-p100 {
+  color: lighten($primary, 40%);
+}
+
+.txt-p200 {
+  color: lighten($primary, 30%);
+}
+
+.txt-p300 {
+  color: lighten($primary, 20%);
+}
+
+.txt-p400 {
+  color: lighten($primary, 10%);
+}
+
+.txt-p500 {
+  color: $primary;
+}
+
+.txt-p600 {
+  color: darken($primary, 10%);
+}
+
+.txt-p700 {
+  color: darken($primary, 20%);
+}
+
+.txt-p800 {
+  color: darken($primary, 30%);
+}
+
+.txt-p900 {
+  color: darken($primary, 40%);
+}
+
+.txt-s100 {
+  color: lighten($secondary, 40%);
+}
+
+.txt-s200 {
+  color: lighten($secondary, 30%);
+}
+
+.txt-s300 {
+  color: lighten($secondary, 20%);
+}
+
+.txt-s400 {
+  color: lighten($secondary, 10%);
+}
+
+.txt-s500 {
+  color: $secondary;
+}
+
+.txt-s600 {
+  color: darken($secondary, 10%);
+}
+
+.txt-s700 {
+  color: darken($secondary, 20%);
+}
+
+.txt-s800 {
+  color: darken($secondary, 30%);
+}
+
+.txt-s900 {
+  color: darken($secondary, 40%);
+}
+
+.txt-s100 {
+  color: lighten($grayscale, 40%);
+}
+
+.txt-s200 {
+  color: lighten($grayscale, 30%);
+}
+
+.txt-s300 {
+  color: lighten($grayscale, 20%);
+}
+
+.txt-s400 {
+  color: lighten($grayscale, 10%);
+}
+
+.txt-s500 {
+  color: $grayscale;
+}
+
+.txt-s600 {
+  color: darken($grayscale, 10%);
+}
+
+.txt-s700 {
+  color: darken($grayscale, 20%);
+}
+
+.txt-s800 {
+  color: darken($grayscale, 30%);
+}
+
+.txt-s900 {
+  color: darken($grayscale, 40%);
+}
+
+/* colors - borders */
+.bdr-p100 {
+  border-color: lighten($primary, 40%);
+}
+
+.bdr-p200 {
+  border-color: lighten($primary, 30%);
+}
+
+.bdr-p300 {
+  border-color: lighten($primary, 20%);
+}
+
+.bdr-p400 {
+  border-color: lighten($primary, 10%);
+}
+
+.bdr-p500 {
+  border-color: $primary;
+}
+
+.bdr-p600 {
+  border-color: darken($primary, 10%);
+}
+
+.bdr-p700 {
+  border-color: darken($primary, 20%);
+}
+
+.bdr-p800 {
+  border-color: darken($primary, 30%);
+}
+
+.bdr-p900 {
+  border-color: darken($primary, 40%);
+}
+
+.bdr-s100 {
+  border-color: lighten($secondary, 40%);
+}
+
+.bdr-s200 {
+  border-color: lighten($secondary, 30%);
+}
+
+.bdr-s300 {
+  border-color: lighten($secondary, 20%);
+}
+
+.bdr-s400 {
+  border-color: lighten($secondary, 10%);
+}
+
+.bdr-s500 {
+  border-color: $secondary;
+}
+
+.bdr-s600 {
+  border-color: darken($secondary, 10%);
+}
+
+.bdr-s700 {
+  border-color: darken($secondary, 20%);
+}
+
+.bdr-s800 {
+  border-color: darken($secondary, 30%);
+}
+
+.bdr-s900 {
+  border-color: darken($secondary, 40%);
+}
+
+.bdr-s100 {
+  border-color: lighten($grayscale, 40%);
+}
+
+.bdr-s200 {
+  border-color: lighten($grayscale, 30%);
+}
+
+.bdr-s300 {
+  border-color: lighten($grayscale, 20%);
+}
+
+.bdr-s400 {
+  border-color: lighten($grayscale, 10%);
+}
+
+.bdr-s500 {
+  border-color: $grayscale;
+}
+
+.bdr-s600 {
+  border-color: darken($grayscale, 10%);
+}
+
+.bdr-s700 {
+  border-color: darken($grayscale, 20%);
+}
+
+.bdr-s800 {
+  border-color: darken($grayscale, 30%);
+}
+
+.bdr-s900 {
+  border-color: darken($grayscale, 40%);
+}
+
+/* typography font sizes */
+.font-alpha {
+  @include font-size(24px);
+}
+
+.font-beta {
+  @include font-size(22px);
+}
+
+.font-xlg {
+  @include font-size(20px);
+}
+
+.font-lg {
+  @include font-size(18px);
+}
+
+.font-md {
+  @include font-size(16px);
+}
+
+.font-sm {
+  @include font-size(14px);
+}
+
+.font-xsm {
+  @include font-size(12px);
+}
+
+/* typography font styles */
+.txt-thin {
+  @include font-style($weight: 200);
+}
+
+.txt-light {
+  @include font-style($weight: 300);
+}
+
+.txt-norm {
+  @include font-style($weight: normal);
+  @include font-style($weight: 400);
+}
+
+.txt-med {
+  @include font-style($weight: 500);
+}
+
+.txt-bold {
+  @include font-style($weight: bold);
+  @include font-style($weight: 700);
+}
+
+.txt-blk {
+  @include font-style($weight: 800);
+}
+
+.txt-italic {
+  @include font-style($style: italic);
+}
+
+.txt-upper {
+  @include font-style($case: uppercase);
+}
+
+.txt-capital {
+  @include font-style($case: capitalize);
+}
+
+.txt-lower {
+  @include font-style($case: lowercase);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
