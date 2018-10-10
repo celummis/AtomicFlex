@@ -403,16 +403,356 @@
   @include font-style($case: lowercase);
 }
 
+/* positioning */
+.pos-t {
+  @include position(absolute, $xs, 0, 0, 0);
+}
+
+.pos-t {
+  @include position(absolute, $sm, 0, 0, 0);
+}
+
+.pos-t {
+  @include position(absolute, $md, 0, 0, 0);
+}
+
+.pos-y {
+  @include position(absolute, 0, $xs, 0, 0);
+}
+
+.pos-y {
+  @include position(absolute, 0, $sm, 0, 0);
+}
+
+.pos-y {
+  @include position(absolute, 0, $md, 0, 0);
+}
+
+.pos-b {
+  @include position(absolute, 0, 0, $xs, 0);
+}
+
+.pos-b {
+  @include position(absolute, 0, 0, $sm, 0);
+}
+
+.pos-b {
+  @include position(absolute, 0, 0, $sm, 0);
+}
+
+.pos-x {
+  @include position(absolute, 0, 0, 0, $xs);
+}
+
+.pos-x {
+  @include position(absolute, 0, 0, 0, $sm);
+}
+
+.pos-x {
+  @include position(absolute, 0, 0, 0, $md);
+}
+
+.pos-ty {
+  @include position(absolute, $xs, $xs, 0, 0);
+}
+
+.pos-ty {
+  @include position(absolute, $sm, $sm, 0, 0);
+}
+
+.pos-ty {
+  @include position(absolute, $md, $md, 0, 0);
+}
+
+.pos-tx {
+  @include position(absolute, $xs, 0, 0, $xs);
+}
+
+.pos-tx {
+  @include position(absolute, $sm, 0, 0, $sm);
+}
+
+.pos-tx {
+  @include position(absolute, $md, 0, 0, $md);
+}
+
+.pos-by {
+  @include position(absolute, 0, $xs, $xs, 0);
+}
+
+.pos-by {
+  @include position(absolute, 0, $sm, $sm, 0);
+}
+
+.pos-by {
+  @include position(absolute, 0, $md, $md, 0);
+}
+
+.pos-bx {
+  @include position(absolute, 0, 0, $xs, $xs);
+}
+
+.pos-bx {
+  @include position(absolute, 0, 0, $sm, $sm);
+}
+
+.pos-bx {
+  @include position(absolute, 0, 0, $md, $md);
+}
+
+/* grid row */
 
 
+/* grid columns */
 
+/* grid row spacing */
+.baseline-xs {
+  @include spacing(margin, $xs, 0, $xs, 0);
+}
 
+.baseline-sm {
+  @include spacing(margin, $sm, 0, $sm, 0);
+}
 
+.baseline-md {
+  @include spacing(margin, $md, 0, $md, 0);
+}
 
+.baseline-lg {
+  @include spacing(margin, $lg, 0, $lg, 0);
+}
 
+.baseline-xlg {
+  @include spacing(margin, $xlg, 0, $xlg, 0);
+}
 
+/* column gutter spacing */
+.gutter-xs {
+  @include spacing(padding, 0, $xs, 0, $xs);
+}
 
+.gutter-sm {
+  @include spacing(padding, 0, $sm, 0, $sm);
+}
 
+.gutter-md {
+  @include spacing(padding, 0, $md, 0, $md);
+}
 
+.gutter-lg {
+  @include spacing(padding, 0, $lg, 0, $lg);
+}
 
+.gutter-xlg {
+  @include spacing(padding, 0, $xlg, 0, $xlg);
+}
 
+/* margin spacing helpers */
+.m-xs {
+  @include spacing(margin, $xs, $xs, $xs, $xs);
+}
+
+.m-sm {
+  @include spacing(margin, $sm, $sm, $sm, $sm);
+}
+
+.m-md {
+  @include spacing(margin, $md, $md, $md, $md);
+}
+
+.m-lg {
+  @include spacing(margin, $lg, $lg, $lg, $lg);
+}
+
+.m-xlg {
+  @include spacing(margin, $xlg, $xlg, $xlg, $xlg);
+}
+
+.mx-xs {
+  @include spacing(margin, 0, 0, 0, $xs);
+}
+
+.mx-sm {
+  @include spacing(margin, 0, 0, 0, $sm);
+}
+
+.mx-md {
+  @include spacing(margin, 0, 0, 0, $md);
+}
+
+.mx-lg {
+  @include spacing(margin, 0, 0, 0, $lg);
+}
+
+.mx-xlg {
+  @include spacing(margin, 0, 0, 0, $xlg);
+}
+
+.mt-xs {
+  @include spacing(margin, $xs, 0, 0, 0);
+}
+
+.mt-sm {
+  @include spacing(margin, $sm, 0, 0, 0);
+}
+
+.mt-md {
+  @include spacing(margin, $md, 0, 0, 0);
+}
+
+.mt-lg {
+  @include spacing(margin, $lg, 0, 0, 0);
+}
+
+.mt-xlg {
+  @include spacing(margin, $xlg, 0, 0, 0);
+}
+
+.my-xs {
+  @include spacing(margin, 0, $xs, 0, 0);
+}
+
+.my-sm {
+  @include spacing(margin, 0, $sm, 0, 0);
+}
+
+.my-md {
+  @include spacing(margin, 0, $md, 0, 0);
+}
+
+.my-lg {
+  @include spacing(margin, 0, $lg, 0, 0);
+}
+
+.my-xlg {
+  @include spacing(margin, 0, $xlg, 0, 0);
+}
+
+.mb-xs {
+  @include spacing(margin, 0, 0, $xs, 0);
+}
+
+.mb-sm {
+  @include spacing(margin, 0, 0, $sm, 0);
+}
+
+.mb-md {
+  @include spacing(margin, 0, 0, $md, 0);
+}
+
+.mb-lg {
+  @include spacing(margin, 0, 0, $lg, 0);
+}
+
+.mb-xlg {
+  @include spacing(margin, 0, 0, $xlg, 0);
+}
+
+.mg-none {
+  @include spacing(margin, 0, 0, 0, 0);
+}
+
+/* padding spacing helpers */
+.p-xs {
+  @include spacing(padding, $xs, $xs, $xs, $xs);
+}
+
+.p-sm {
+  @include spacing(padding, $sm, $sm, $sm, $sm);
+}
+
+.p-md {
+  @include spacing(padding, $md, $md, $md, $md);
+}
+
+.p-lg {
+  @include spacing(padding, $lg, $lg, $lg, $lg);
+}
+
+.p-xlg {
+  @include spacing(padding, $xlg, $xlg, $xlg, $xlg);
+}
+
+.px-xs {
+  @include spacing(padding, 0, 0, 0, $xs);
+}
+
+.px-sm {
+  @include spacing(padding, 0, 0, 0, $sm);
+}
+
+.px-md {
+  @include spacing(padding, 0, 0, 0, $md);
+}
+
+.px-lg {
+  @include spacing(padding, 0, 0, 0, $lg);
+}
+
+.px-xlg {
+  @include spacing(padding, 0, 0, 0, $xlg);
+}
+
+.pt-xs {
+  @include spacing(padding, $xs, 0, 0, 0);
+}
+
+.pt-sm {
+  @include spacing(padding, $sm, 0, 0, 0);
+}
+
+.pt-md {
+  @include spacing(padding, $md, 0, 0, 0);
+}
+
+.pt-lg {
+  @include spacing(padding, $lg, 0, 0, 0);
+}
+
+.pt-xlg {
+  @include spacing(padding, $xlg, 0, 0, 0);
+}
+
+.py-xs {
+  @include spacing(padding, 0, $xs, 0, 0);
+}
+
+.py-sm {
+  @include spacing(padding, 0, $sm, 0, 0);
+}
+
+.py-md {
+  @include spacing(padding, 0, $md, 0, 0);
+}
+
+.py-lg {
+  @include spacing(padding, 0, $lg, 0, 0);
+}
+
+.py-xlg {
+  @include spacing(padding, 0, $xlg, 0, 0);
+}
+
+.pb-xs {
+  @include spacing(padding, 0, 0, $xs, 0);
+}
+
+.pb-sm {
+  @include spacing(padding, 0, 0, $sm, 0);
+}
+
+.pb-md {
+  @include spacing(padding, 0, 0, $md, 0);
+}
+
+.pb-lg {
+  @include spacing(padding, 0, 0, $lg, 0);
+}
+
+.pb-xlg {
+  @include spacing(padding, 0, 0, $xlg, 0);
+}
+
+.pd-none {
+  @include spacing(padding, 0, 0, 0, 0);
+}
