@@ -500,10 +500,288 @@
   @include position(absolute, 0, 0, $md, $md);
 }
 
-/* grid row */
+
+/* flexbox row for grid rows */
+.row {
+  @include grid($direction: row, $wrap: nowrap, $justify: flex-start, $items: stretch, $content: stretch);
+}
+
+.row-reverse {
+  @include grid($direction: row-reverse);
+}
+
+.row-column {
+  @include grid($direction: column);
+}
+
+.row-column-reverse {
+  @include grid($direction: column-reverse);
+}
+
+.row-wrap {
+  @include grid($wrap: wrap);
+}
+
+.row-justify-center {
+  @include grid($justify: center);
+}
+
+.row-justify-end {
+  @include grid($justify: flex-end);
+}
+
+.row-justify-between {
+  @include grid($justify: space-between);
+}
+
+.row-align-start {
+  @include grid($items: flex-start);
+}
+
+.row-align-center {
+  @include grid($items: center);
+}
+
+.row-align-end {
+  @include grid($items: flex-end);
+}
+
+.row-content-start {
+  @include grid($content: flex-start);
+}
+
+.row-content-center {
+  @include grid($items: center);
+}
+
+.row-content-end {
+  @include grid($items: flex-end);
+}
+
+.row-content-between {
+  @include grid($items: space-between);
+}
+
+.row-content-around {
+  @include grid($items: space-around);
+}
 
 
 /* grid columns */
+.column-1 {
+  @include column($basis: $col-1);
+}
+
+.column-2 {
+  @include column($basis: $col-2);
+}
+
+.column-3 {
+  @include column($basis: $col-3);
+}
+
+.column-4 {
+  @include column($basis: $col-4);
+}
+
+.column-5 {
+  @include column($basis: $col-5);
+}
+
+.column-6 {
+  @include column($basis: $col-6);
+}
+
+.column-7 {
+  @include column($basis: $col-7);
+}
+
+.column-8 {
+  @include column($basis: $col-8);
+}
+
+.column-9 {
+  @include column($basis: $col-9);
+}
+
+.column-10 {
+  @include column($basis: $col-10);
+}
+
+.column-11 {
+  @include column($basis: $col-11);
+}
+
+.column-12 {
+  @include column($basis: $col-12);
+}
+
+
+/* flexbox items */
+.item-grow {
+  @include column($grow: 0);
+}
+
+.item-shrink {
+  @include column($grow: 1);
+}
+
+.item-stretch {
+  @include column($self: stretch);
+}
+
+.item-start {
+  @include column($self: flex-start);
+}
+
+.item-center {
+  @include column($self: center);
+}
+
+.item-end {
+  @include column($self: flex-end);
+}
+
+
+/* column size offsets using padding instead of margins because of box-sizing: border-box */
+
+.off-right-1 {
+  padding-right: $col-1;
+}
+
+.off-left-1 {
+  padding-left: $col-1;
+}
+
+.off-right-2 {
+  padding-right: $col-2;
+}
+
+.off-left-2 {
+  padding-left: $col-2;
+}
+
+.off-right-3 {
+  padding-right: $col-3;
+}
+
+.off-left-3 {
+  padding-left: $col-3;
+}
+
+.off-right-4 {
+  padding-right: $col-4;
+}
+
+.off-left-4 {
+  padding-left: $col-4;
+}
+
+.off-right-5 {
+  padding-right: $col-5;
+}
+
+.off-left-5 {
+  padding-left: $col-5;
+}
+
+.off-right-6 {
+  padding-right: $col-6;
+}
+
+.off-left-6 {
+  padding-left: $col-6;
+}
+
+.off-right-7 {
+  padding-right: $col-7;
+}
+
+.off-left-7 {
+  padding-left: $col-7;
+}
+
+.off-right-8 {
+  padding-right: $col-8;
+}
+
+.off-left-8 {
+  padding-left: $col-8;
+}
+
+.off-right-9 {
+  padding-right: $col-9;
+}
+
+.off-left-9 {
+  padding-left: $col-9;
+}
+
+.off-right-10 {
+  padding-right: $col-10;
+}
+
+.off-left-10 {
+  padding-left: $col-10;
+}
+
+.off-right-11 {
+  padding-right: $col-11;
+}
+
+.off-left-11 {
+  padding-left: $col-11;
+}
+
+
+/* other layout helpers */
+
+.left {
+  @include layout(left);
+}
+
+.right {
+  @include layout(right);
+}
+
+.center {
+  @include layout(center);
+}
+
+.clear,
+.clear:before,
+.clear:after {
+  @include layout(clear);
+}
+
+.d-none {
+  @include layout(hide);
+}
+
+.d-inline {
+  @include layout(inline);
+}
+
+.d-block {
+  @include layout(show);
+}
+
+.d-hide {
+  @include layout(hidden);
+}
+
+.d-visible {
+  @include layout(reveal);
+}
+
+.over-hidden {
+  @include layout(overflow-hidden);
+}
+
+.over-auto {
+  @include layout(overflow-auto);
+}
+
 
 /* grid row spacing */
 .baseline-xs {
@@ -525,6 +803,7 @@
 .baseline-xlg {
   @include spacing(margin, $xlg, 0, $xlg, 0);
 }
+
 
 /* column gutter spacing */
 .gutter-xs {
@@ -756,3 +1035,4 @@
 .pd-none {
   @include spacing(padding, 0, 0, 0, 0);
 }
+

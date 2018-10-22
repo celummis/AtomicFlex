@@ -64,29 +64,29 @@
 }
 
 // flexbox grid mixins
-@mixin grid($direction: null, $wrap: null, $flow: null, $justify: null, $items: null, $content: null, $gutter: null) {
-  display: -webkit-flex;
-  display: flex;
-@if $direction {
-      -webkit-flex-direction: $direction;
-  flex-direction: $direction;
-}
-@if $wrap {
-      -webkit-flex-wrap: $wrap;
-  flex-wrap: $wrap;
-}
-@if $justify {
-      -webkit-justify-content: $justify;
-  justify-content: $justify;
-}
-@if $items {
-      -webkit-align-items: $items;
-  align-items: $items;
-}
-@if $content {
-      -webkit-align-content: $content;
-  align-content: $content;
-}
+@mixin grid($direction: null, $wrap: null, $justify: null, $items: null, $content: null) {
+    display: -webkit-flex;
+    display: flex;
+    @if $direction {
+        -webkit-flex-direction: $direction;
+        flex-direction: $direction;
+    }
+    @if $wrap {
+        -webkit-flex-wrap: $wrap;
+        flex-wrap: $wrap;
+    }
+    @if $justify {
+        -webkit-justify-content: $justify;
+        justify-content: $justify;
+    }
+    @if $items {
+        -webkit-align-items: $items;
+        align-items: $items;
+    }
+    @if $content {
+        -webkit-align-content: $content;
+        align-content: $content;
+    }
 }
 
 @mixin column($gutter: null, $baseline: null, $basis: auto, $grow: 0, $shrink: 1, $self: null, $order: null) {
@@ -137,6 +137,9 @@
   @if $type == show {
       visibility: visible;
       display: block;
+  }
+  @if $type == reveal {
+    visibility: visible;
   }
   @if $type == top {
       vertical-align: top;

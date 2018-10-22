@@ -1,7 +1,6 @@
 // _variables.scss
 
-// colors variables
-// use lighten or darken to change color value
+// colors variables (use lighten or darken to change color value)
 $primary: hsl(200, 100%, 50%);
 $secondary: hsl(40, 100%, 50%);
 $grayscale: hsl(0, 0, 50%);
@@ -59,3 +58,13 @@ $size-85: 85%;
 $size-90: 90%;
 $size-95: 95%;
 $size-100: 100%;
+
+// border variables 
+$bdr-sm: 1px;
+$bdr-md: 2px;
+$bdr-lg: 3px;
+$bdr-xlg: 5px;
+$radi-sm: 3px;
+$radi-md: 5px;
+$radi-lg: 10px;
+$radi-xlg: 20px;
