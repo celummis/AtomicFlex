@@ -356,7 +356,7 @@
   @include font-size(14px);
 }
 
-.font-xsm {
+.font-xs {
   @include font-size(12px);
 }
 
@@ -374,7 +374,7 @@
   @include font-style($weight: 400);
 }
 
-.txt-med {
+.txt-md {
   @include font-style($weight: 500);
 }
 
@@ -404,99 +404,99 @@
 }
 
 /* positioning */
-.pos-t {
+.pos-t-xs {
   @include position(absolute, $xs, 0, 0, 0);
 }
 
-.pos-t {
+.pos-t-sm {
   @include position(absolute, $sm, 0, 0, 0);
 }
 
-.pos-t {
+.pos-t-md {
   @include position(absolute, $md, 0, 0, 0);
 }
 
-.pos-y {
+.pos-y-xs {
   @include position(absolute, 0, $xs, 0, 0);
 }
 
-.pos-y {
+.pos-y-sm {
   @include position(absolute, 0, $sm, 0, 0);
 }
 
-.pos-y {
+.pos-y-md {
   @include position(absolute, 0, $md, 0, 0);
 }
 
-.pos-b {
+.pos-b-xs {
   @include position(absolute, 0, 0, $xs, 0);
 }
 
-.pos-b {
+.pos-b-sm {
   @include position(absolute, 0, 0, $sm, 0);
 }
 
-.pos-b {
+.pos-b-md {
   @include position(absolute, 0, 0, $sm, 0);
 }
 
-.pos-x {
+.pos-x-xs {
   @include position(absolute, 0, 0, 0, $xs);
 }
 
-.pos-x {
+.pos-x-sm {
   @include position(absolute, 0, 0, 0, $sm);
 }
 
-.pos-x {
+.pos-x-md {
   @include position(absolute, 0, 0, 0, $md);
 }
 
-.pos-ty {
+.pos-ty-xs {
   @include position(absolute, $xs, $xs, 0, 0);
 }
 
-.pos-ty {
+.pos-ty-sm {
   @include position(absolute, $sm, $sm, 0, 0);
 }
 
-.pos-ty {
+.pos-ty-md {
   @include position(absolute, $md, $md, 0, 0);
 }
 
-.pos-tx {
+.pos-tx-xs {
   @include position(absolute, $xs, 0, 0, $xs);
 }
 
-.pos-tx {
+.pos-tx-sm {
   @include position(absolute, $sm, 0, 0, $sm);
 }
 
-.pos-tx {
+.pos-tx-md {
   @include position(absolute, $md, 0, 0, $md);
 }
 
-.pos-by {
+.pos-by-xs {
   @include position(absolute, 0, $xs, $xs, 0);
 }
 
-.pos-by {
+.pos-by-sm {
   @include position(absolute, 0, $sm, $sm, 0);
 }
 
-.pos-by {
+.pos-by-md {
   @include position(absolute, 0, $md, $md, 0);
 }
 
-.pos-bx {
+.pos-bx-xs {
   @include position(absolute, 0, 0, $xs, $xs);
 }
 
-.pos-bx {
+.pos-bx-sm {
   @include position(absolute, 0, 0, $sm, $sm);
 }
 
-.pos-bx {
+.pos-bx-md {
   @include position(absolute, 0, 0, $md, $md);
 }
 
