@@ -12,4 +12,4 @@ The "AtomicFlex.scss" generates CSS that can build any UI design. This approach 
 
 If you like semantic CSS, then this framework is not for you. 
 
-I developed this CSS framework because I wanted one CSS file that would enable me to quickly prototype a UI design in code. 
+I developed this CSS framework because I wanted one CSS file that would enable me to quickly prototype a UI design in code. Then I discovered how easy it is to build any component with interchangable CSS. You can look at this as the lego approach to CSS. 
