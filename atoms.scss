@@ -77,39 +77,39 @@
   background: darken($secondary, 40%);
 }
 
-.bg-s100 {
+.bg-g100 {
   background: lighten($grayscale, 40%);
 }
 
-.bg-s200 {
+.bg-g200 {
   background: lighten($grayscale, 30%);
 }
 
-.bg-s300 {
+.bg-g300 {
   background: lighten($grayscale, 20%);
 }
 
-.bg-s400 {
+.bg-g400 {
   background: lighten($grayscale, 10%);
 }
 
-.bg-s500 {
+.bg-g500 {
   background: $grayscale;
 }
 
-.bg-s600 {
+.bg-g600 {
   background: darken($grayscale, 10%);
 }
 
-.bg-s700 {
+.bg-g700 {
   background: darken($grayscale, 20%);
 }
 
-.bg-s800 {
+.bg-g800 {
   background: darken($grayscale, 30%);
 }
 
-.bg-s900 {
+.bg-g900 {
   background: darken($grayscale, 40%);
 }
 
@@ -186,39 +186,39 @@
   color: darken($secondary, 40%);
 }
 
-.txt-s100 {
+.txt-g100 {
   color: lighten($grayscale, 40%);
 }
 
-.txt-s200 {
+.txt-g200 {
   color: lighten($grayscale, 30%);
 }
 
-.txt-s300 {
+.txt-g300 {
   color: lighten($grayscale, 20%);
 }
 
-.txt-s400 {
+.txt-g400 {
   color: lighten($grayscale, 10%);
 }
 
-.txt-s500 {
+.txt-g500 {
   color: $grayscale;
 }
 
-.txt-s600 {
+.txt-g600 {
   color: darken($grayscale, 10%);
 }
 
-.txt-s700 {
+.txt-g700 {
   color: darken($grayscale, 20%);
 }
 
-.txt-s800 {
+.txt-g800 {
   color: darken($grayscale, 30%);
 }
 
-.txt-s900 {
+.txt-g900 {
   color: darken($grayscale, 40%);
 }
 
@@ -295,39 +295,39 @@
   border-color: darken($secondary, 40%);
 }
 
-.bdr-s100 {
+.bdr-g100 {
   border-color: lighten($grayscale, 40%);
 }
 
-.bdr-s200 {
+.bdr-g200 {
   border-color: lighten($grayscale, 30%);
 }
 
-.bdr-s300 {
+.bdr-g300 {
   border-color: lighten($grayscale, 20%);
 }
 
-.bdr-s400 {
+.bdr-g400 {
   border-color: lighten($grayscale, 10%);
 }
 
-.bdr-s500 {
+.bdr-g500 {
   border-color: $grayscale;
 }
 
-.bdr-s600 {
+.bdr-g600 {
   border-color: darken($grayscale, 10%);
 }
 
-.bdr-s700 {
+.bdr-g700 {
   border-color: darken($grayscale, 20%);
 }
 
-.bdr-s800 {
+.bdr-g800 {
   border-color: darken($grayscale, 30%);
 }
 
-.bdr-s900 {
+.bdr-g900 {
   border-color: darken($grayscale, 40%);
 }
 
@@ -404,6 +404,16 @@
 }
 
 /* positioning */
+.pos-t-fixed {
+  @include position(fixed, $top: 0);
+  z-index: 1000;
+}
+
+.pos-b-fixed {
+  @include position(fixed, $bottom: 0);
+  z-index: 1000;
+}
+
 .pos-t-xs {
   @include position(absolute, $xs, 0, 0, 0);
 }
