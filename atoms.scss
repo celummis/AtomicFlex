@@ -733,6 +733,83 @@
   padding-left: $col-11;
 }
 
+/* width classes */
+.wth-10 {
+  width: $size-10;
+}
+
+.wth-15 {
+  width: $size-15;
+}
+
+.wth-20 {
+  width: $size-20;
+}
+
+.wth-25 {
+  width: $size-25;
+}
+
+.wth-30 {
+  width: $size-30;
+}
+
+.wth-35 {
+  width: $size-35;
+}
+
+.wth-40 {
+  width: $size-40;
+}
+
+.wth-45 {
+  width: $size-45;
+}
+
+.wth-50 {
+  width: $size-50;
+}
+
+.wth-55 {
+  width: $size-55;
+}
+
+.wth-60 {
+  width: $size-60;
+}
+
+.wth-65 {
+  width: $size-65;
+}
+
+.wth-70 {
+  width: $size-70;
+}
+
+.wth-75 {
+  width: $size-75;
+}
+
+.wth-80 {
+  width: $size-80;
+}
+
+.wth-85 {
+  width: $size-85;
+}
+
+.wth-90 {
+  width: $size-90;
+}
+
+.wth-95 {
+  width: $size-95;
+}
+
+.wth-100 {
+  width: $size-100;
+}
+
 
 /* other layout helpers */
 
@@ -1035,4 +1112,3 @@
 .pd-none {
   @include spacing(padding, 0, 0, 0, 0);
 }
-
