@@ -20,24 +20,24 @@
 @mixin type-wrap($value) {
 	@if $value == nowrap {
         white-space: nowrap;
-    } 
+    }
     @if $value == pre {
         white-space: pre;
-    } 
+    }
     @if $value == pre-line {
         white-space: pre-line;
-    } 
+    }
     @if $value == pre-wrap {
         white-space: pre-wrap;
-    } 
+    }
     @if $value == break-word {
         word-wrap: break-word;
-    } 
+    }
     @if $value == truncate {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-    } 
+    }
     @if $value == normal {
         white-space: normal;
         word-wrap: normal;
@@ -47,10 +47,16 @@
 // spacing mixin
 @mixin spacing($type: null, $top: null, $right: null, $bottom: null, $left: null) {
 	@if $type == margin {
-			margin: $top $right $bottom $left;
+        margin-top: $top;
+        margin-bottom: $bottom;
+        margin-left: $left;
+        margin-right: $right;
 	}
 	@if $type == padding {
-			padding: $top $right $bottom $left;
+        padding-top: $top;
+        padding-bottom: $bottom;
+        padding-left: $left;
+        padding-right: $right;
 	}
 }
 
@@ -89,13 +95,12 @@
     }
 }
 
-@mixin column($gutter: null, $baseline: null, $basis: auto, $grow: 0, $shrink: 1, $self: null, $order: null) {
-  -webkit-flex-basis: $basis;
-  flex-basis: $basis;
+@mixin column($width: auto, $grow: 0, $shrink: 1, $self: null, $order: null) {
   -webkit-flex-grow: $grow;
   flex-grow: $grow;
   -webkit-flex-shrink: $shrink;
   flex-shrink: $shrink;
+  width: $width;
   @if $self {
       -webkit-align-self: $self;
       align-self: $self;
@@ -278,7 +283,7 @@
 // tables mixin
 @mixin table($type: null, $header: null, $color: null, $alt: null) {
   @if $type == standard {
-      thead th, 
+      thead th,
       tfoot td {
           background: $header;
       }
@@ -287,7 +292,7 @@
       }
   }
   @if $type == ladder {
-      thead th, 
+      thead th,
       tfoot td {
           background: $header;
       }
