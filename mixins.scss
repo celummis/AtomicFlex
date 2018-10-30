@@ -186,73 +186,64 @@
 
 // border mixin
 @mixin border($type: null, $size: null, $style: null, $color: null, $radius: null) {
-  @if $type == box {
-       border: $size $style $color;
+    @if $type == box {
+         border: $size $style $color;
+    }
+    @if $type == ladder {
+        border-top: $size $style $color;
+        border-bottom: $size $style $color;
+    }
+    @if $type == fence {
+        border-left: $size $style $color;
+        border-right: $size $style $color;
+    }
+    @if $type == top {
+        border-top: $size $style $color;
+    }
+    @if $type == right {
+        border-right: $size $style $color;
+    }
+    @if $type == bottom {
+        border-bottom: $size $style $color;
+    }
+    @if $type == left {
+        border-left: $size $style $color;
+    }
+    @if $type == none {
+        border: 0 none transparent;
+    }
+    @if $type == rounded {
+        border-radius: $radius;
+    }
+    @if $type == rounded-top {
+        border-top-left-radius: $radius;
+        border-top-right-radius: $radius;
+    }
+    @if $type == rounded-bottom {
+        border-bottom-left-radius: $radius;
+        border-bottom-right-radius: $radius;
+    }
+    @if $type == rounded-left {
+        border-top-left-radius: $radius;
+        border-bottom-left-radius: $radius;
+    }
+    @if $type == rounded-right {
+        border-top-right-radius: $radius;
+        border-bottom-right-radius: $radius;
+    }
+    @if $type == rounded-top-left {
+        border-top-left-radius: $radius;
+    }
+    @if $type == rounded-top-right {
+        border-top-right-radius: $radius;
+    }
+    @if $type == rounded-bottom-left {
+        border-bottom-left-radius: $radius;
+    }
+    @if $type == rounded-top-right {
+        border-bottom-left-radius: $radius;
+    }
   }
-  @if $type == ladder {
-      border-top: $size $style $color;
-      border-bottom: $size $style $color;
-  }
-  @if $type == fence {
-      border-left: $size $style $color;
-      border-right: $size $style $color;
-  }
-  @if $type == top {
-      border-top: $size $style $color;
-  }
-  @if $type == right {
-      border-right: $size $style $color;
-  }
-  @if $type == bottom {
-      border-bottom: $size $style $color;
-  }
-  @if $type == left {
-      border-left: $size $style $color;
-  }
-  @if $type == none {
-      border: 0 none transparent;
-  }
-  @if $type == rounded {
-      border: $size $style $color;
-      border-radius: $radius;
-  }
-  @if $type == rounded-top {
-      border: $size $style $color;
-      border-top-left-radius: $radius;
-      border-top-right-radius: $radius;
-  }
-  @if $type == rounded-bottom {
-      border: $size $style $color;
-      border-bottom-left-radius: $radius;
-      border-bottom-right-radius: $radius;
-  }
-  @if $type == rounded-left {
-      border: $size $style $color;
-      border-top-left-radius: $radius;
-      border-bottom-left-radius: $radius;
-  }
-  @if $type == rounded-right {
-      border: $size $style $color;
-      border-top-right-radius: $radius;
-      border-bottom-right-radius: $radius;
-  }
-  @if $type == rounded-top-left {
-      border: $size $style $color;
-      border-top-left-radius: $radius;
-  }
-  @if $type == rounded-top-right {
-      border: $size $style $color;
-      border-top-right-radius: $radius;
-  }
-  @if $type == rounded-bottom-left {
-      border: $size $style $color;
-      border-bottom-left-radius: $radius;
-  }
-  @if $type == rounded-top-right {
-      border: $size $style $color;
-      border-bottom-left-radius: $radius;
-  }
-}
 
 // background mixin
 @mixin background($type: null, $value: null) {
