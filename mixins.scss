@@ -185,63 +185,79 @@
 }
 
 // border mixin
-@mixin border($type: null, $size: null, $style: null, $color: null, $radius: null) {
+@mixin border($type: null, $size: null, $style: null) {
     @if $type == box {
-         border: $size $style $color;
+         border-width: $size; 
+         border-style: $style;
     }
     @if $type == ladder {
-        border-top: $size $style $color;
-        border-bottom: $size $style $color;
+        border-top-width: $size; 
+        border-bottom-width: $size; 
+        border-top-style: $style;
+        border-bottom-style: $style;
     }
     @if $type == fence {
-        border-left: $size $style $color;
-        border-right: $size $style $color;
+        border-left-width: $size; 
+        border-right-width: $size; 
+        border-left-style: $style;
+        border-right-style: $style;
     }
     @if $type == top {
-        border-top: $size $style $color;
+        border-top-width: $size; 
+        border-top-style: $style;
     }
     @if $type == right {
-        border-right: $size $style $color;
+        border-right-width: $size; 
+        border-right-style: $style;
     }
     @if $type == bottom {
-        border-bottom: $size $style $color;
+        border-bottom-width: $size; 
+        border-bottom-style: $style;
     }
     @if $type == left {
-        border-left: $size $style $color;
+        border-left-width: $size; 
+        border-left-style: $style;
     }
     @if $type == none {
-        border: 0 none transparent;
+        border-width: 0; 
+        border-style: none;
     }
+  }
+
+  @mixin radius($type: null, $size: null) {
     @if $type == rounded {
-        border-radius: $radius;
+        border-radius: $size;
     }
     @if $type == rounded-top {
-        border-top-left-radius: $radius;
-        border-top-right-radius: $radius;
+        border-top-left-radius: $size;
+        border-top-right-radius: $size;
     }
     @if $type == rounded-bottom {
-        border-bottom-left-radius: $radius;
-        border-bottom-right-radius: $radius;
+        border-bottom-left-radius: $size;
+        border-bottom-right-radius: $size;
     }
     @if $type == rounded-left {
-        border-top-left-radius: $radius;
-        border-bottom-left-radius: $radius;
+        border-top-left-radius: $size;
+        border-bottom-left-radius: $size;
     }
     @if $type == rounded-right {
-        border-top-right-radius: $radius;
-        border-bottom-right-radius: $radius;
+        border-top-right-radius: $size;
+        border-bottom-right-radius: $size;
     }
     @if $type == rounded-top-left {
-        border-top-left-radius: $radius;
+        border-top-left-radius: $size;
     }
     @if $type == rounded-top-right {
-        border-top-right-radius: $radius;
+        border-top-right-radius: $size;
     }
     @if $type == rounded-bottom-left {
-        border-bottom-left-radius: $radius;
+        border-bottom-left-radius: $size;
     }
     @if $type == rounded-top-right {
-        border-bottom-left-radius: $radius;
+        border-bottom-left-radius: $size;
+    }
+    @if $type == none {
+        border-radius: $size;
     }
   }
 

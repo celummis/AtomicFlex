@@ -59,12 +59,9 @@ $size-90: 90%;
 $size-95: 95%;
 $size-100: 100%;
 
-// border variables
-$bdr-sm: 1px;
-$bdr-md: 2px;
-$bdr-lg: 3px;
-$bdr-xlg: 5px;
-$radi-sm: 3px;
-$radi-md: 5px;
-$radi-lg: 10px;
-$radi-xlg: 20px;
+// border radius variables
+$radi-xs: 4px;
+$radi-sm: 8px;
+$radi-md: 16px;
+$radi-lg: 32px;
+$radi-xlg: 64px;
