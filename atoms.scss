@@ -785,6 +785,19 @@
   @include font-style($case: lowercase);
 }
 
+/* typography positioning */
+.f-left {
+  text-align: left;
+}
+
+.f-right {
+  text-align: right;
+}
+
+.f-center {
+  text-align: center;
+}
+
 /* positioning */
 .pos-t-fixed {
   @include position(fixed, $top: 0);
@@ -971,6 +984,10 @@
 
 
 /* grid columns */
+.column-1 {
+  @include column($width: auto);
+}
+
 .column-1 {
   @include column($width: $col-1);
 }
