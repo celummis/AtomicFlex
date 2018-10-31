@@ -185,8 +185,8 @@
 }
 
 // border mixin
-@mixin border($type: null, $size: null, $style: null) {
-    @if $type == box {
+@mixin border($type: null, $size: null, $style: null, $radius: null) {
+    @if $type == square {
          border-width: $size; 
          border-style: $style;
     }
@@ -222,6 +222,7 @@
         border-width: 0; 
         border-style: none;
     }
+    
   }
 
   @mixin radius($type: null, $size: null) {

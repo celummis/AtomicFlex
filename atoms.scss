@@ -2,6 +2,20 @@
 @import "variables";
 @import "mixins";
 
+// Class name atomic prefix legend
+// .b-            (border)
+// .d-            (display)
+// .f-            (font size and style)
+// .o-            (overflow)
+// .r-            (radius)
+// .t-            (typography color)
+// .w-            (width)
+// .bg-           (background color)
+// .m[t,b,x,y]-   (margin)
+// .p[t,b,x,y]-   (padding)
+// .off-          (column offsets)
+// .pos-          (position)
+
 /* background: primary */
 .bg-p50 {
   background: lighten($primary, 45%);
@@ -237,541 +251,537 @@
 
 
 /* text: primary */
-.txt-p50 {
+.t-p50 {
   color: lighten($primary, 45%);
 }
 
-.txt-p100 {
+.t-p100 {
   color: lighten($primary, 40%);
 }
 
-.txt-p150 {
+.t-p150 {
   color: lighten($primary, 35%);
 }
 
-.txt-p200 {
+.t-p200 {
   color: lighten($primary, 30%);
 }
 
-.txt-p250 {
+.t-p250 {
   color: lighten($primary, 25%);
 }
 
-.txt-p300 {
+.t-p300 {
   color: lighten($primary, 20%);
 }
 
-.txt-p350 {
+.t-p350 {
   color: lighten($primary, 15%);
 }
 
-.txt-p400 {
+.t-p400 {
   color: lighten($primary, 10%);
 }
 
-.txt-p450 {
+.t-p450 {
   color: lighten($primary, 5%);
 }
 
-.txt-p500 {
+.t-p500 {
   color: $primary;
 }
 
-.txt-p550 {
+.t-p550 {
   color: darken($primary, 5%);
 }
 
-.txt-p600 {
+.t-p600 {
   color: darken($primary, 10%);
 }
 
-.txt-p650 {
+.t-p650 {
   color: darken($primary, 15%);
 }
 
-.txt-p700 {
+.t-p700 {
   color: darken($primary, 20%);
 }
 
-.txt-p750 {
+.t-p750 {
   color: darken($primary, 25%);
 }
 
-.txt-p800 {
+.t-p800 {
   color: darken($primary, 30%);
 }
 
-.txt-p850 {
+.t-p850 {
   color: darken($primary, 35%);
 }
 
-.txt-p900 {
+.t-p900 {
   color: darken($grayscale, 40%);
 }
 
-.txt-p950 {
+.t-p950 {
   color: darken($grayscale, 45%);
 }
 
 
 /* text: secondary */
-.txt-s50 {
+.t-s50 {
   color: lighten($secondary, 45%);
 }
 
-.txt-s100 {
+.t-s100 {
   color: lighten($secondary, 40%);
 }
 
-.txt-s150 {
+.t-s150 {
   color: lighten($secondary, 35%);
 }
 
-.txt-s200 {
+.t-s200 {
   color: lighten($secondary, 30%);
 }
 
-.txt-s250 {
+.t-s250 {
   color: lighten($secondary, 25%);
 }
 
-.txt-s300 {
+.t-s300 {
   color: lighten($secondary, 20%);
 }
 
-.txt-s350 {
+.t-s350 {
   color: lighten($secondary, 15%);
 }
 
-.txt-s400 {
+.t-s400 {
   color: lighten($secondary, 10%);
 }
 
-.txt-s450 {
+.t-s450 {
   color: lighten($secondary, 5%);
 }
 
-.txt-s500 {
+.t-s500 {
   color: $secondary;
 }
 
-.txt-s550 {
+.t-s550 {
   color: darken($secondary, 5%);
 }
 
-.txt-s600 {
+.t-s600 {
   color: darken($secondary, 10%);
 }
 
-.txt-s650 {
+.t-s650 {
   color: darken($secondary, 15%);
 }
 
-.txt-s700 {
+.t-s700 {
   color: darken($secondary, 20%);
 }
 
-.txt-s750 {
+.t-s750 {
   color: darken($secondary, 25%);
 }
 
-.txt-s800 {
+.t-s800 {
   color: darken($secondary, 30%);
 }
 
-.txt-s850 {
+.t-s850 {
   color: darken($secondary, 35%);
 }
 
-.txt-s900 {
+.t-s900 {
   color: darken($secondary, 40%);
 }
 
-.txt-s950 {
+.t-s950 {
   color: darken($secondary, 45%);
 }
 
 
 /* text: grayscale */
-.txt-g50 {
+.t-g50 {
   color: lighten($grayscale, 45%);
 }
 
-.txt-g100 {
+.t-g100 {
   color: lighten($grayscale, 40%);
 }
 
-.txt-g150 {
+.t-g150 {
   color: lighten($grayscale, 35%);
 }
 
-.txt-g200 {
+.t-g200 {
   color: lighten($grayscale, 30%);
 }
 
-.txt-g250 {
+.t-g250 {
   color: lighten($grayscale, 25%);
 }
 
-.txt-g300 {
+.t-g300 {
   color: lighten($grayscale, 20%);
 }
 
-.txt-g350 {
+.t-g350 {
   color: lighten($grayscale, 15%);
 }
 
-.txt-g400 {
+.t-g400 {
   color: lighten($grayscale, 10%);
 }
 
-.txt-g450 {
+.t-g450 {
   color: lighten($grayscale, 5%);
 }
 
-.txt-g500 {
+.t-g500 {
   color: $grayscale;
 }
 
-.txt-g550 {
+.t-g550 {
   color: darken($grayscale, 5%);
 }
 
-.txt-g600 {
+.t-g600 {
   color: darken($grayscale, 10%);
 }
 
-.txt-g650 {
+.t-g650 {
   color: darken($grayscale, 15%);
 }
 
-.txt-g700 {
+.t-g700 {
   color: darken($grayscale, 20%);
 }
 
-.txt-g750 {
+.t-g750 {
   color: darken($grayscale, 25%);
 }
 
-.txt-g800 {
+.t-g800 {
   color: darken($grayscale, 30%);
 }
 
-.txt-g850 {
+.t-g850 {
   color: darken($grayscale, 35%);
 }
 
-.txt-g900 {
+.t-g900 {
   color: darken($grayscale, 40%);
 }
 
-.txt-g950 {
+.t-g950 {
   color: darken($grayscale, 45%);
 }
 
 
 /* border: primary */
-.bdr-p50 {
+.b-p50 {
   border-color: lighten($primary, 45%);
 }
 
-.bdr-p100 {
+.b-p100 {
   border-color: lighten($primary, 40%);
 }
 
-.bdr-p150 {
+.b-p150 {
   border-color: lighten($primary, 35%);
 }
 
-.bdr-p200 {
+.b-p200 {
   border-color: lighten($primary, 30%);
 }
 
-.bdr-p250 {
+.b-p250 {
   border-color: lighten($primary, 25%);
 }
 
-.bdr-p300 {
+.b-p300 {
   border-color: lighten($primary, 20%);
 }
 
-.bdr-p350 {
+.b-p350 {
   border-color: lighten($primary, 15%);
 }
 
-.bdr-p400 {
+.b-p400 {
   border-color: lighten($primary, 10%);
 }
 
-.bdr-p450 {
+.b-p450 {
   border-color: lighten($primary, 5%);
 }
 
-.bdr-p500 {
+.b-p500 {
   border-color: $primary;
 }
 
-.bdr-p550 {
+.b-p550 {
   border-color: darken($primary, 5%);
 }
 
-.bdr-p600 {
+.b-p600 {
   border-color: darken($primary, 10%);
 }
 
-.bdr-p650 {
+.b-p650 {
   border-color: darken($primary, 15%);
 }
 
-.bdr-p700 {
+.b-p700 {
   border-color: darken($primary, 20%);
 }
 
-.bdr-p750 {
+.b-p750 {
   border-color: darken($primary, 25%);
 }
 
-.bdr-p800 {
+.b-p800 {
   border-color: darken($primary, 30%);
 }
 
-.bdr-p850 {
+.b-p850 {
   border-color: darken($primary, 35%);
 }
 
-.bdr-p900 {
+.b-p900 {
   border-color: darken($grayscale, 40%);
 }
 
-.bdr-p950 {
+.b-p950 {
   border-color: darken($grayscale, 45%);
 }
 
 
 /* border: secondary */
-.bdr-s50 {
+.b-s50 {
   border-color: lighten($secondary, 45%);
 }
 
-.bdr-s100 {
+.b-s100 {
   border-color: lighten($secondary, 40%);
 }
 
-.bdr-s150 {
+.b-s150 {
   border-color: lighten($secondary, 35%);
 }
 
-.bdr-s200 {
+.b-s200 {
   border-color: lighten($secondary, 30%);
 }
 
-.bdr-s250 {
+.b-s250 {
   border-color: lighten($secondary, 25%);
 }
 
-.bdr-s300 {
+.b-s300 {
   border-color: lighten($secondary, 20%);
 }
 
-.bdr-s350 {
+.b-s350 {
   border-color: lighten($secondary, 15%);
 }
 
-.bdr-s400 {
+.b-s400 {
   border-color: lighten($secondary, 10%);
 }
 
-.bdr-s450 {
+.b-s450 {
   border-color: lighten($secondary, 5%);
 }
 
-.bdr-s500 {
+.b-s500 {
   border-color: $secondary;
 }
 
-.bdr-s550 {
+.b-s550 {
   border-color: darken($secondary, 5%);
 }
 
-.bdr-s600 {
+.b-s600 {
   border-color: darken($secondary, 10%);
 }
 
-.bdr-s650 {
+.b-s650 {
   border-color: darken($secondary, 15%);
 }
 
-.bdr-s700 {
+.b-s700 {
   border-color: darken($secondary, 20%);
 }
 
-.bdr-s750 {
+.b-s750 {
   border-color: darken($secondary, 25%);
 }
 
-.bdr-s800 {
+.b-s800 {
   border-color: darken($secondary, 30%);
 }
 
-.bdr-s850 {
+.b-s850 {
   border-color: darken($secondary, 35%);
 }
 
-.bdr-s900 {
+.b-s900 {
   border-color: darken($secondary, 40%);
 }
 
-.bdr-s950 {
+.b-s950 {
   border-color: darken($secondary, 45%);
 }
 
 
 /* border: grayscale */
-.bdr-g50 {
+.b-g50 {
   border-color: lighten($grayscale, 45%);
 }
 
-.bdr-g100 {
+.b-g100 {
   border-color: lighten($grayscale, 40%);
 }
 
-.bdr-g150 {
+.b-g150 {
   border-color: lighten($grayscale, 35%);
 }
 
-.bdr-g200 {
+.b-g200 {
   border-color: lighten($grayscale, 30%);
 }
 
-.bdr-g250 {
+.b-g250 {
   border-color: lighten($grayscale, 25%);
 }
 
-.bdr-g300 {
+.b-g300 {
   border-color: lighten($grayscale, 20%);
 }
 
-.bdr-g350 {
+.b-g350 {
   border-color: lighten($grayscale, 15%);
 }
 
-.bdr-g400 {
+.b-g400 {
   border-color: lighten($grayscale, 10%);
 }
 
-.bdr-g450 {
+.b-g450 {
   border-color: lighten($grayscale, 5%);
 }
 
-.bdr-g500 {
+.b-g500 {
   border-color: $grayscale;
 }
 
-.bdr-g550 {
+.b-g550 {
   border-color: darken($grayscale, 5%);
 }
 
-.bdr-g600 {
+.b-g600 {
   border-color: darken($grayscale, 10%);
 }
 
-.bdr-g650 {
+.b-g650 {
   border-color: darken($grayscale, 15%);
 }
 
-.bdr-g700 {
+.b-g700 {
   border-color: darken($grayscale, 20%);
 }
 
-.bdr-g750 {
+.b-g750 {
   border-color: darken($grayscale, 25%);
 }
 
-.bdr-g800 {
+.b-g800 {
   border-color: darken($grayscale, 30%);
 }
 
-.bdr-g850 {
+.b-g850 {
   border-color: darken($grayscale, 35%);
 }
 
-.bdr-g900 {
+.b-g900 {
   border-color: darken($grayscale, 40%);
 }
 
-.bdr-g950 {
+.b-g950 {
   border-color: darken($grayscale, 45%);
 }
 
 /* typography font sizes */
-.font-alpha {
+.f-alpha {
   @include font-size(24px);
 }
 
-.font-beta {
+.f-beta {
   @include font-size(22px);
 }
 
-.font-xlg {
+.f-xlg {
   @include font-size(20px);
 }
 
-.font-lg {
+.f-lg {
   @include font-size(18px);
 }
 
-.font-md {
+.f-md {
   @include font-size(16px);
 }
 
-.font-sm {
+.f-sm {
   @include font-size(14px);
 }
 
-.font-xs {
+.f-xs {
   @include font-size(12px);
 }
 
 /* typography font styles */
-.txt-thin {
+.f-thin {
   @include font-style($weight: 200);
 }
 
-.txt-light {
+.f-light {
   @include font-style($weight: 300);
 }
 
-.txt-norm {
+.f-norm {
   @include font-style($weight: normal);
   @include font-style($weight: 400);
 }
 
-.txt-md {
+.f-semi {
   @include font-style($weight: 500);
 }
 
-.txt-bold {
+.f-bold {
   @include font-style($weight: bold);
   @include font-style($weight: 700);
 }
 
-.txt-blk {
-  @include font-style($weight: 800);
-}
-
-.txt-italic {
+.f-italic {
   @include font-style($style: italic);
 }
 
-.txt-upper {
+.f-uppercase {
   @include font-style($case: uppercase);
 }
 
-.txt-capital {
+.f-capital {
   @include font-style($case: capitalize);
 }
 
-.txt-lower {
+.f-lowercase {
   @include font-style($case: lowercase);
 }
 
@@ -1009,123 +1019,6 @@
   @include column($width: $col-12);
 }
 
-
-/* flexbox items */
-.items-grow {
-  @include column($grow: 0);
-}
-
-.items-shrink {
-  @include column($grow: 1);
-}
-
-.items-stretch {
-  @include column($self: stretch);
-}
-
-.items-start {
-  @include column($self: flex-start);
-}
-
-.items-center {
-  @include column($self: center);
-}
-
-.items-end {
-  @include column($self: flex-end);
-}
-
-
-/* column size offsets using padding instead of margins because of box-sizing: border-box */
-
-.off-right-1 {
-  padding-right: $col-1;
-}
-
-.off-left-1 {
-  padding-left: $col-1;
-}
-
-.off-right-2 {
-  padding-right: $col-2;
-}
-
-.off-left-2 {
-  padding-left: $col-2;
-}
-
-.off-right-3 {
-  padding-right: $col-3;
-}
-
-.off-left-3 {
-  padding-left: $col-3;
-}
-
-.off-right-4 {
-  padding-right: $col-4;
-}
-
-.off-left-4 {
-  padding-left: $col-4;
-}
-
-.off-right-5 {
-  padding-right: $col-5;
-}
-
-.off-left-5 {
-  padding-left: $col-5;
-}
-
-.off-right-6 {
-  padding-right: $col-6;
-}
-
-.off-left-6 {
-  padding-left: $col-6;
-}
-
-.off-right-7 {
-  padding-right: $col-7;
-}
-
-.off-left-7 {
-  padding-left: $col-7;
-}
-
-.off-right-8 {
-  padding-right: $col-8;
-}
-
-.off-left-8 {
-  padding-left: $col-8;
-}
-
-.off-right-9 {
-  padding-right: $col-9;
-}
-
-.off-left-9 {
-  padding-left: $col-9;
-}
-
-.off-right-10 {
-  padding-right: $col-10;
-}
-
-.off-left-10 {
-  padding-left: $col-10;
-}
-
-.off-right-11 {
-  padding-right: $col-11;
-}
-
-.off-left-11 {
-  padding-left: $col-11;
-}
-
 /* width classes */
 .w-10 {
   width: $size-10;
@@ -1203,6 +1096,121 @@
   width: $size-100;
 }
 
+/* flexbox items */
+.items-grow {
+  @include column($grow: 0);
+}
+
+.items-shrink {
+  @include column($grow: 1);
+}
+
+.items-stretch {
+  @include column($self: stretch);
+}
+
+.items-start {
+  @include column($self: flex-start);
+}
+
+.items-center {
+  @include column($self: center);
+}
+
+.items-end {
+  @include column($self: flex-end);
+}
+
+/* column size offsets using padding instead of margins because of box-sizing: border-box */
+
+.off-y1 {
+  padding-right: $col-1;
+}
+
+.off-x1 {
+  padding-left: $col-1;
+}
+
+.off-y2 {
+  padding-right: $col-2;
+}
+
+.off-x2 {
+  padding-left: $col-2;
+}
+
+.off-y3 {
+  padding-right: $col-3;
+}
+
+.off-x3 {
+  padding-left: $col-3;
+}
+
+.off-y4 {
+  padding-right: $col-4;
+}
+
+.off-x4 {
+  padding-left: $col-4;
+}
+
+.off-y5 {
+  padding-right: $col-5;
+}
+
+.off-x5 {
+  padding-left: $col-5;
+}
+
+.off-y6 {
+  padding-right: $col-6;
+}
+
+.off-x6 {
+  padding-left: $col-6;
+}
+
+.off-y7 {
+  padding-right: $col-7;
+}
+
+.off-x7 {
+  padding-left: $col-7;
+}
+
+.off-y8 {
+  padding-right: $col-8;
+}
+
+.off-x8 {
+  padding-left: $col-8;
+}
+
+.off-y9 {
+  padding-right: $col-9;
+}
+
+.off-x9 {
+  padding-left: $col-9;
+}
+
+.off-y10 {
+  padding-right: $col-10;
+}
+
+.off-x10 {
+  padding-left: $col-10;
+}
+
+.off-y11 {
+  padding-right: $col-11;
+}
+
+.off-x11 {
+  padding-left: $col-11;
+}
+
 /* other layout helpers */
 
 .left {
@@ -1253,45 +1261,45 @@
 
 
 /* grid row spacing using padding top and padding bottom */
-.bline-xs {
+.baseline-xs {
   @include spacing(padding, $top: $xs, $bottom: $xs);
 }
 
-.bline-sm {
+.baseline-sm {
   @include spacing(padding, $top: $sm, $bottom: $sm);
 }
 
-.bline-md {
+.baseline-md {
   @include spacing(padding, $top: $md, $bottom: $md);
 }
 
-.bline-lg {
+.baseline-lg {
   @include spacing(padding, $top: $lg, $bottom: $lg);
 }
 
-.bline-xlg {
+.baseline-xlg {
   @include spacing(padding, $top: $xlg, $bottom: $xlg);
 }
 
 
 /* column gutter spacing using padding left and padding right */
-.gut-xs {
+.gutter-xs {
   @include spacing(padding, $left: $xs, $right: $xs);
 }
 
-.gut-sm {
+.gutter-sm {
   @include spacing(padding, $left: $sm, $right: $sm);
 }
 
-.gut-md {
+.gutter-md {
   @include spacing(padding, $left: $md, $right: $md);
 }
 
-.gut-lg {
+.gutter-lg {
   @include spacing(padding, $left: $lg, $right: $lg);
 }
 
-.gut-xlg {
+.gutter-xlg {
   @include spacing(padding, $left: $xlg, $right: $xlg);
 }
 
@@ -1522,61 +1530,224 @@
 }
 
 /* borders */
-.solid-box {
-  @include border(box, 1px, solid);
+.b-square {
+  @include border(square, 1px, solid);
 }
 
-.dotted-box {
-  @include border(box, 1px, dotted);
-}
-
-.solid-ladder {
+.b-ladder {
   @include border(ladder, 1px, solid);
 }
 
-.dotted-ladder {
-  @include border(ladder, 1px, dotted);
+.b-fence {
+  @include border(ladder, 1px, solid);
 }
 
-.solid-fence {
-  @include border(fence, 1px, solid);
-}
-
-.dotted-fence {
-  @include border(fence, 1px, dotted);
-}
-
-.solid-top {
+.b-top {
   @include border(top, 1px, solid);
 }
 
-.dotted-top{
-  @include border(top, 1px, dotted);
-}
-
-.solid-bottom {
+.b-bottom {
   @include border(bottom, 1px, solid);
 }
 
-.dotted-bottom {
-  @include border(bottom, 1px, dotted);
-}
-
-.solid-left {
+.b-left {
   @include border(left, 1px, solid);
 }
 
-.dotted-left {
-  @include border(left, 1px, dotted);
-}
-
-.solid-right {
+.b-right {
   @include border(right, 1px, solid);
 }
 
-.dotted-right {
-  @include border(right, 1px, dotted);
+/* border radius */
+.r-xs {
+  @include radius(rounded, $rounded-xs);
 }
+
+.r-sm {
+  @include radius(rounded, $rounded-sm);
+}
+
+.r-md {
+  @include radius(rounded, $rounded-md);
+}
+
+.r-lg {
+  @include radius(rounded, $rounded-lg);
+}
+
+.r-xlg {
+  @include radius(rounded, $rounded-xlg);
+}
+
+/* border radius top */
+.rt-xs {
+  @include radius(rounded-top, $rounded-xs);
+}
+
+.rt-sm {
+  @include radius(rounded-top, $rounded-sm);
+}
+
+.rt-md {
+  @include radius(rounded-top, $rounded-md);
+}
+
+.rt-lg {
+  @include radius(rounded-top, $rounded-lg);
+}
+
+.rt-xlg {
+  @include radius(rounded-top, $rounded-xlg);
+}
+
+/* border radius bottom */
+.rb-xs {
+  @include radius(rounded-bottom, $rounded-xs);
+}
+
+.rb-sm {
+  @include radius(rounded-bottom, $rounded-sm);
+}
+
+.rb-md {
+  @include radius(rounded-bottom, $rounded-md);
+}
+
+.rb-lg {
+  @include radius(rounded-bottom, $rounded-lg);
+}
+
+.rb-xlg {
+  @include radius(rounded-bottom, $rounded-xlg);
+}
+
+/* border radius left */
+.rx-xs {
+  @include radius(rounded-left, $rounded-xs);
+}
+
+.rx-sm {
+  @include radius(rounded-left, $rounded-sm);
+}
+
+.rx-md {
+  @include radius(rounded-left, $rounded-md);
+}
+
+.rx-lg {
+  @include radius(rounded-left, $rounded-lg);
+}
+
+.rx-xlg {
+  @include radius(rounded-left, $rounded-xlg);
+}
+
+/* border radius right */
+.ry-xs {
+  @include radius(rounded-right, $rounded-xs);
+}
+
+.ry-sm {
+  @include radius(rounded-right, $rounded-sm);
+}
+
+.ry-md {
+  @include radius(rounded-right, $rounded-md);
+}
+
+.ry-lg {
+  @include radius(rounded-right, $rounded-lg);
+}
+
+.ry-xlg {
+  @include radius(rounded-right, $rounded-xlg);
+}
+
+/* border radius top left */
+.rtx-xs {
+  @include radius(rounded-top-left, $rounded-xs);
+}
+
+.rtx-sm {
+  @include radius(rounded-top-left, $rounded-sm);
+}
+
+.rtx-md {
+  @include radius(rounded-top-left, $rounded-md);
+}
+
+.rtx-lg {
+  @include radius(rounded-top-left, $rounded-lg);
+}
+
+.rtx-xlg {
+  @include radius(rounded-top-left, $rounded-xlg);
+}
+
+/* border radius top right */
+.rty-xs {
+  @include radius(rounded-top-right, $rounded-xs);
+}
+
+.rty-sm {
+  @include radius(rounded-top-right, $rounded-sm);
+}
+
+.rty-md {
+  @include radius(rounded-top-right, $rounded-md);
+}
+
+.rty-lg {
+  @include radius(rounded-top-right, $rounded-lg);
+}
+
+.rty-xlg {
+  @include radius(rounded-top-right, $rounded-xlg);
+}
+
+/* border radius bottom left */
+.rbx-xs {
+  @include radius(rounded-bottom-left, $rounded-xs);
+}
+
+.rbx-sm {
+  @include radius(rounded-bottom-left, $rounded-sm);
+}
+
+.rbx-md {
+  @include radius(rounded-bottom-left, $rounded-md);
+}
+
+.rbx-lg {
+  @include radius(rounded-bottom-left, $rounded-lg);
+}
+
+.rbx-xlg {
+  @include radius(rounded-bottom-left, $rounded-xlg);
+}
+
+/* border radius bottom right */
+.rby-xs {
+  @include radius(rounded-bottom-right, $rounded-xs);
+}
+
+.rby-sm {
+  @include radius(rounded-bottom-right, $rounded-sm);
+}
+
+.rby-md {
+  @include radius(rounded-bottom-right, $rounded-md);
+}
+
+.rby-lg {
+  @include radius(rounded-bottom-right, $rounded-lg);
+}
+
+.rby-xlg {
+  @include radius(rounded-bottom-right, $rounded-xlg);
+}
+
+
 
 /* Specific Styles for application or website */
 html {
