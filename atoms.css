@@ -1542,6 +1542,19 @@ a {
   overflow: hidden;
 }
 
+/* alignment */
+.valign-t {
+  vertical-align: top;
+}
+
+.valign-m {
+  vertical-align: middle;
+}
+
+.valign-b {
+  vertical-align: bottom;
+}
+
 /* grid row spacing using padding top and padding bottom */
 .baseline-xs {
   padding-top: 4px;
