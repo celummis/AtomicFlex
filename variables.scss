@@ -1,11 +1,14 @@
 // _variables.scss
 
 // colors variables (use lighten or darken to change color value)
-$primary: hsl(99, 61%, 39%);
-$secondary: hsl(153, 61%, 39%);
-$grayscale: hsl(0, 0, 50%);
-$black: hsl(0, 0, 0);
-$white: hsl(0, 0, 100%);
+$primary: #51A027;
+$secondary: #1E795E;
+$grayscale: #A1A1A1;
+$black: #000000;
+$white: #ffffff;
+$good: #56F500;
+$warning: #DB9200;
+$danger: #DB2500;
 
 // typography variables
 $base-font: 'Roboto', sans-serif;

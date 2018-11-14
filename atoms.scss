@@ -1,3 +1,5 @@
+// _atoms.scss
+
 @import "reset";
 @import "variables";
 @import "mixins";
@@ -249,6 +251,26 @@
   background: darken($grayscale, 45%);
 }
 
+.bg-white {
+  background: $white;
+}
+
+.bg-black {
+  background: $black;
+}
+
+.bg-good {
+  background: $good;
+}
+
+.bg-warning {
+  background: $warning;
+}
+
+.bg-danger {
+  background: $danger;
+}
+
 
 /* text: primary */
 .t-p50 {
@@ -483,6 +505,13 @@
   color: darken($grayscale, 45%);
 }
 
+.t-white {
+  color: $white;
+}
+
+.t-black {
+  color: $black;
+}
 
 /* border: primary */
 .b-p50 {
@@ -717,6 +746,14 @@
   border-color: darken($grayscale, 45%);
 }
 
+.b-white {
+  border-color: $white;
+}
+
+.b-black {
+  border-color: $black;
+}
+
 /* typography font sizes */
 .f-alpha {
   @include font-size(24px);
@@ -784,6 +821,9 @@
 .f-lowercase {
   @include font-style($case: lowercase);
 }
+.f-underline {
+  text-decoration: underline;
+}
 
 /* typography positioning */
 .f-left {
@@ -799,6 +839,14 @@
 }
 
 /* positioning */
+.pos-relative {
+  @include position(relative);
+}
+
+.pos-absolute {
+  @include position(absolute);
+}
+
 .pos-t-fixed {
   @include position(fixed, $top: 0);
   z-index: 1000;
@@ -810,51 +858,51 @@
 }
 
 .pos-t-xs {
-  @include position(absolute, $xs, 0, 0, 0);
+  @include position(absolute, $top: $xs);
 }
 
 .pos-t-sm {
-  @include position(absolute, $sm, 0, 0, 0);
+  @include position(absolute, $top: $sm);
 }
 
 .pos-t-md {
-  @include position(absolute, $md, 0, 0, 0);
+  @include position(absolute, $top: $md);
 }
 
 .pos-y-xs {
-  @include position(absolute, 0, $xs, 0, 0);
+  @include position(absolute, $right: $xs);
 }
 
 .pos-y-sm {
-  @include position(absolute, 0, $sm, 0, 0);
+  @include position(absolute, $right: $sm);
 }
 
 .pos-y-md {
-  @include position(absolute, 0, $md, 0, 0);
+  @include position(absolute, $right: $md);
 }
 
 .pos-b-xs {
-  @include position(absolute, 0, 0, $xs, 0);
+  @include position(absolute, $bottom: $xs);
 }
 
 .pos-b-sm {
-  @include position(absolute, 0, 0, $sm, 0);
+  @include position(absolute, $bottom: $sm);
 }
 
 .pos-b-md {
-  @include position(absolute, 0, 0, $sm, 0);
+  @include position(absolute, $bottom: $md);
 }
 
 .pos-x-xs {
-  @include position(absolute, 0, 0, 0, $xs);
+  @include position(absolute, $left: $xs);
 }
 
 .pos-x-sm {
-  @include position(absolute, 0, 0, 0, $sm);
+  @include position(absolute, $left: $sm);
 }
 
 .pos-x-md {
-  @include position(absolute, 0, 0, 0, $md);
+  @include position(absolute, $left: $md);
 }
 
 .pos-ty-xs {
@@ -984,7 +1032,7 @@
 
 
 /* grid columns */
-.column-1 {
+.column {
   @include column($width: auto);
 }
 
@@ -1276,6 +1324,19 @@
   @include layout(overflow-auto);
 }
 
+/* alignment */
+.valign-t {
+  vertical-align: top;
+}
+
+.valign-m {
+  vertical-align: middle;
+}
+
+.valign-b {
+  vertical-align: bottom;
+}
+
 
 /* grid row spacing using padding top and padding bottom */
 .baseline-xs {
@@ -1546,6 +1607,31 @@
   @include spacing(padding, $left: 0);
 }
 
+/* padding spacing right */
+.py-xs {
+  @include spacing(padding, $right: $xs);
+}
+
+.py-sm {
+  @include spacing(padding, $right: $sm);
+}
+
+.py-md {
+  @include spacing(padding, $right: $md);
+}
+
+.py-lg {
+  @include spacing(padding, $right: $lg);
+}
+
+.py-xlg {
+  @include spacing(padding, $right: $xlg);
+}
+
+.py-none {
+  @include spacing(padding, $right: 0);
+}
+
 /* borders */
 .b-square {
   @include border(square, 1px, solid);
@@ -1556,7 +1642,7 @@
 }
 
 .b-fence {
-  @include border(ladder, 1px, solid);
+  @include border(fence, 1px, solid);
 }
 
 .b-top {
@@ -1762,12 +1848,4 @@
 
 .rby-xlg {
   @include radius(rounded-bottom-right, $rounded-xlg);
-}
-
-
-
-/* Specific Styles for application or website */
-html {
-  @include font-size(16px);
-  font-family: $base-font;
 }
