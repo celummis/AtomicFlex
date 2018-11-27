@@ -1637,31 +1637,31 @@
 }
 
 /* borders */
-.b-square {
+.b-square-xs {
   @include border(square, 1px, solid);
 }
 
-.b-ladder {
+.b-ladder-xs {
   @include border(ladder, 1px, solid);
 }
 
-.b-fence {
+.b-fence-xs {
   @include border(fence, 1px, solid);
 }
 
-.b-top {
+.b-top-xs {
   @include border(top, 1px, solid);
 }
 
-.b-bottom {
+.b-bottom-xs {
   @include border(bottom, 1px, solid);
 }
 
-.b-left {
+.b-left-xs {
   @include border(left, 1px, solid);
 }
 
-.b-right {
+.b-right-xs {
   @include border(right, 1px, solid);
 }
 

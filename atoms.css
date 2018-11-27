@@ -1931,41 +1931,41 @@ a {
 }
 
 /* borders */
-.b-square {
+.b-square-xs {
   border-width: 1px;
   border-style: solid;
 }
 
-.b-ladder {
+.b-ladder-xs {
   border-top-width: 1px;
   border-bottom-width: 1px;
   border-top-style: solid;
   border-bottom-style: solid;
 }
 
-.b-fence {
+.b-fence-xs {
   border-left-width: 1px;
   border-right-width: 1px;
   border-left-style: solid;
   border-right-style: solid;
 }
 
-.b-top {
+.b-top-xs {
   border-top-width: 1px;
   border-top-style: solid;
 }
 
-.b-bottom {
+.b-bottom-xs {
   border-bottom-width: 1px;
   border-bottom-style: solid;
 }
 
-.b-left {
+.b-left-xs {
   border-left-width: 1px;
   border-left-style: solid;
 }
 
-.b-right {
+.b-right-xs {
   border-right-width: 1px;
   border-right-style: solid;
 }
