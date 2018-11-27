@@ -1564,6 +1564,10 @@ a {
 }
 
 .d-hide {
+  display: none;
+}
+
+.d-hidden {
   visibility: hidden;
 }
 

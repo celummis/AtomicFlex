@@ -1309,6 +1309,10 @@
 }
 
 .d-hide {
+  @include layout(hide);
+}
+
+.d-hidden {
   @include layout(hidden);
 }
 
