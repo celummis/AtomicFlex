@@ -1,0 +1,173 @@
+// _atoms-padding.scss
+
+@import "variables";
+@import "mixins";
+
+/* grid row spacing using padding top and padding bottom */
+.baseline-xs {
+  @include spacing(padding, $top: $xs, $bottom: $xs);
+}
+
+.baseline-sm {
+  @include spacing(padding, $top: $sm, $bottom: $sm);
+}
+
+.baseline-md {
+  @include spacing(padding, $top: $md, $bottom: $md);
+}
+
+.baseline-lg {
+  @include spacing(padding, $top: $lg, $bottom: $lg);
+}
+
+.baseline-xlg {
+  @include spacing(padding, $top: $xlg, $bottom: $xlg);
+}
+
+
+/* column gutter spacing using padding left and padding right */
+.gutter-xs {
+  @include spacing(padding, $left: $xs, $right: $xs);
+}
+
+.gutter-sm {
+  @include spacing(padding, $left: $sm, $right: $sm);
+}
+
+.gutter-md {
+  @include spacing(padding, $left: $md, $right: $md);
+}
+
+.gutter-lg {
+  @include spacing(padding, $left: $lg, $right: $lg);
+}
+
+.gutter-xlg {
+  @include spacing(padding, $left: $xlg, $right: $xlg);
+}
+
+/* padding spacing around */
+.p-xs {
+  @include spacing(padding, $xs, $xs, $xs, $xs);
+}
+
+.p-sm {
+  @include spacing(padding, $sm, $sm, $sm, $sm);
+}
+
+.p-md {
+  @include spacing(padding, $md, $md, $md, $md);
+}
+
+.p-lg {
+  @include spacing(padding, $lg, $lg, $lg, $lg);
+}
+
+.p-xlg {
+  @include spacing(padding, $xlg, $xlg, $xlg, $xlg);
+}
+
+.p-none {
+  @include spacing(padding, 0, 0, 0, 0);
+}
+
+
+/* padding spacing top */
+.pt-xs {
+  @include spacing(padding, $top: $xs);
+}
+
+.pt-sm {
+  @include spacing(padding, $top: $sm);
+}
+
+.pt-md {
+  @include spacing(padding, $top: $md);
+}
+
+.pt-lg {
+  @include spacing(padding, $top: $lg);
+}
+
+.pt-xlg {
+  @include spacing(padding, $top: $xlg);
+}
+
+.pt-none {
+  @include spacing(padding, $top: 0);
+}
+
+/* padding spacing bottom */
+.pb-xs {
+  @include spacing(padding, $bottom: $xs);
+}
+
+.pb-sm {
+  @include spacing(padding, $bottom: $sm);
+}
+
+.pb-md {
+  @include spacing(padding, $bottom: $md);
+}
+
+.pb-lg {
+  @include spacing(padding, $bottom: $lg);
+}
+
+.pb-xlg {
+  @include spacing(padding, $bottom: $xlg);
+}
+
+.pb-none {
+  @include spacing(padding, $bottom: 0);
+}
+
+/* padding spacing left */
+.px-xs {
+  @include spacing(padding, $left: $xs);
+}
+
+.px-sm {
+  @include spacing(padding, $left: $sm);
+}
+
+.px-md {
+  @include spacing(padding, $left: $md);
+}
+
+.px-lg {
+  @include spacing(padding, $left: $lg);
+}
+
+.px-xlg {
+  @include spacing(padding, $left: $xlg);
+}
+
+.px-none {
+  @include spacing(padding, $left: 0);
+}
+
+/* padding spacing right */
+.py-xs {
+  @include spacing(padding, $right: $xs);
+}
+
+.py-sm {
+  @include spacing(padding, $right: $sm);
+}
+
+.py-md {
+  @include spacing(padding, $right: $md);
+}
+
+.py-lg {
+  @include spacing(padding, $right: $lg);
+}
+
+.py-xlg {
+  @include spacing(padding, $right: $xlg);
+}
+
+.py-none {
+  @include spacing(padding, $right: 0);
+}

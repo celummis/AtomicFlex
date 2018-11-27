@@ -1592,58 +1592,6 @@ a {
   vertical-align: bottom;
 }
 
-/* grid row spacing using padding top and padding bottom */
-.baseline-xs {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-.baseline-sm {
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-
-.baseline-md {
-  padding-top: 16px;
-  padding-bottom: 16px;
-}
-
-.baseline-lg {
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
-.baseline-xlg {
-  padding-top: 64px;
-  padding-bottom: 64px;
-}
-
-/* column gutter spacing using padding left and padding right */
-.gutter-xs {
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-.gutter-sm {
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
-.gutter-md {
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
-.gutter-lg {
-  padding-left: 32px;
-  padding-right: 32px;
-}
-
-.gutter-xlg {
-  padding-left: 64px;
-  padding-right: 64px;
-}
-
 /* margin spacing around */
 .m-xs {
   margin-top: 4px;
@@ -1785,6 +1733,58 @@ a {
 
 .my-none {
   margin-right: 64px;
+}
+
+/* grid row spacing using padding top and padding bottom */
+.baseline-xs {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.baseline-sm {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.baseline-md {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.baseline-lg {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.baseline-xlg {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+/* column gutter spacing using padding left and padding right */
+.gutter-xs {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.gutter-sm {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.gutter-md {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.gutter-lg {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.gutter-xlg {
+  padding-left: 64px;
+  padding-right: 64px;
 }
 
 /* padding spacing around */

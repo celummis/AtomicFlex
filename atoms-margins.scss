@@ -1,0 +1,129 @@
+// _atoms-margins.scss
+
+@import "variables";
+@import "mixins";
+
+/* margin spacing around */
+.m-xs {
+  @include spacing(margin, $xs, $xs, $xs, $xs);
+}
+
+.m-sm {
+  @include spacing(margin, $sm, $sm, $sm, $sm);
+}
+
+.m-md {
+  @include spacing(margin, $md, $md, $md, $md);
+}
+
+.m-lg {
+  @include spacing(margin, $lg, $lg, $lg, $lg);
+}
+
+.m-xlg {
+  @include spacing(margin, $xlg, $xlg, $xlg, $xlg);
+}
+
+.m-none {
+  @include spacing(margin, 0, 0, 0, 0);
+}
+
+/* margin spacing top */
+.mt-xs {
+  @include spacing(margin, $top: $xs);
+}
+
+.mt-sm {
+  @include spacing(margin, $top: $sm);
+}
+
+.mt-md {
+  @include spacing(margin, $top: $md);
+}
+
+.mt-lg {
+  @include spacing(margin, $top: $lg);
+}
+
+.mt-xlg {
+  @include spacing(margin, $top: $xlg);
+}
+
+.mt-none {
+  @include spacing(margin, $top: 0);
+}
+
+/* margin spacing bottom */
+.mb-xs {
+  @include spacing(margin, $bottom: $xs);
+}
+
+.mb-sm {
+  @include spacing(margin, $bottom: $sm);
+}
+
+.mb-md {
+  @include spacing(margin, $bottom: $md);
+}
+
+.mb-lg {
+  @include spacing(margin, $bottom: $lg);
+}
+
+.mb-xlg {
+  @include spacing(margin, $bottom: $xlg);
+}
+
+.mb-none {
+  @include spacing(margin, $bottom: 0);
+}
+
+/* margin spacing left */
+.mx-xs {
+  @include spacing(margin, $left: $xs);
+}
+
+.mx-sm {
+  @include spacing(margin, $left: $sm);
+}
+
+.mx-md {
+  @include spacing(margin, $left: $md);
+}
+
+.mx-lg {
+  @include spacing(margin, $left: $lg);
+}
+
+.mx-xlg {
+  @include spacing(margin, $left: $xlg);
+}
+
+.mx-none {
+  @include spacing(margin, $left: 0);
+}
+
+/* margin spacing right */
+.my-xs {
+  @include spacing(margin, $right: $xs);
+}
+
+.my-sm {
+  @include spacing(margin, $right: $sm);
+}
+
+.my-md {
+  @include spacing(margin, $right: $md);
+}
+
+.my-lg {
+  @include spacing(margin, $right: $lg);
+}
+
+.my-xlg {
+  @include spacing(margin, $right: $xlg);
+}
+
+.my-none {
+  @include spacing(margin, $right: $xlg);
+}
