@@ -3,171 +3,160 @@
 @import "variables";
 @import "mixins";
 
-/* grid row spacing using padding top and padding bottom */
-.baseline-xs {
-  @include spacing(padding, $top: $xs, $bottom: $xs);
+/* 
+  xy is for horizontal direction (x = left and y = right)
+  tb is for vertical direction (t = top and b = bottom)
+*/
+
+/* vertical spacing using padding top and padding bottom */
+.baseline-1 {
+  @include spacing(padding, $xs, 0, $xs, 0);
 }
 
-.baseline-sm {
-  @include spacing(padding, $top: $sm, $bottom: $sm);
+.baseline-2 {
+  @include spacing(padding, $sm, 0, $sm, 0);
 }
 
-.baseline-md {
-  @include spacing(padding, $top: $md, $bottom: $md);
+.baseline-3 {
+  @include spacing(padding, $md, 0, $md, 0);
 }
 
-.baseline-lg {
-  @include spacing(padding, $top: $lg, $bottom: $lg);
+.baseline-4 {
+  @include spacing(padding, $lg, 0, $lg, 0);
 }
 
-.baseline-xlg {
-  @include spacing(padding, $top: $xlg, $bottom: $xlg);
+.baseline-5 {
+  @include spacing(padding, $xlg, 0, $xlg, 0);
 }
 
 
-/* column gutter spacing using padding left and padding right */
-.gutter-xs {
-  @include spacing(padding, $left: $xs, $right: $xs);
+/* horizontal spacing using padding left and padding right */
+.gutter-1 {
+  @include spacing(padding, 0, $xs, 0, $xs);
 }
 
-.gutter-sm {
-  @include spacing(padding, $left: $sm, $right: $sm);
+.gutter-2 {
+  @include spacing(padding, 0, $sm, 0, $sm);
 }
 
-.gutter-md {
-  @include spacing(padding, $left: $md, $right: $md);
+.gutter-3 {
+  @include spacing(padding, 0, $md, 0, $md);
 }
 
-.gutter-lg {
-  @include spacing(padding, $left: $lg, $right: $lg);
+.gutter-4 {
+  @include spacing(padding, 0, $lg, 0, $lg);
 }
 
-.gutter-xlg {
-  @include spacing(padding, $left: $xlg, $right: $xlg);
+.gutter-5 {
+  @include spacing(padding, 0, $xlg, 0, $xlg);
 }
 
 /* padding spacing around */
-.p-xs {
+.p-1 {
   @include spacing(padding, $xs, $xs, $xs, $xs);
 }
 
-.p-sm {
+.p-2 {
   @include spacing(padding, $sm, $sm, $sm, $sm);
 }
 
-.p-md {
+.p-3 {
   @include spacing(padding, $md, $md, $md, $md);
 }
 
-.p-lg {
+.p-4 {
   @include spacing(padding, $lg, $lg, $lg, $lg);
 }
 
-.p-xlg {
+.p-5 {
   @include spacing(padding, $xlg, $xlg, $xlg, $xlg);
 }
 
-.p-none {
-  @include spacing(padding, 0, 0, 0, 0);
-}
-
-
 /* padding spacing top */
-.pt-xs {
-  @include spacing(padding, $top: $xs);
+.pt-1 {
+  @include spacing(padding, $xs, 0, 0, 0);
 }
 
-.pt-sm {
-  @include spacing(padding, $top: $sm);
+.pt-2 {
+  @include spacing(padding, $sm, 0, 0, 0);
 }
 
-.pt-md {
-  @include spacing(padding, $top: $md);
+.pt-3 {
+  @include spacing(padding, $md, 0, 0, 0);
 }
 
-.pt-lg {
-  @include spacing(padding, $top: $lg);
+.pt-4 {
+  @include spacing(padding, $lg, 0, 0, 0);
 }
 
-.pt-xlg {
-  @include spacing(padding, $top: $xlg);
-}
-
-.pt-none {
-  @include spacing(padding, $top: 0);
+.pt-5 {
+  @include spacing(padding, $xlg, 0, 0, 0);
 }
 
 /* padding spacing bottom */
-.pb-xs {
-  @include spacing(padding, $bottom: $xs);
+.pb-1 {
+  @include spacing(padding, 0, 0, $xs, 0);
 }
 
-.pb-sm {
-  @include spacing(padding, $bottom: $sm);
+.pb-2 {
+  @include spacing(padding, 0, 0, $sm, 0);
 }
 
-.pb-md {
-  @include spacing(padding, $bottom: $md);
+.pb-3 {
+  @include spacing(padding, 0, 0, $md, 0);
 }
 
-.pb-lg {
-  @include spacing(padding, $bottom: $lg);
+.pb-4 {
+  @include spacing(padding, 0, 0, $lg, 0);
 }
 
-.pb-xlg {
-  @include spacing(padding, $bottom: $xlg);
-}
-
-.pb-none {
-  @include spacing(padding, $bottom: 0);
+.pb-5 {
+  @include spacing(padding, 0, 0, $xlg, 0);
 }
 
 /* padding spacing left */
-.px-xs {
-  @include spacing(padding, $left: $xs);
+.px-1 {
+  @include spacing(padding, 0, 0, 0, $xs);
 }
 
-.px-sm {
-  @include spacing(padding, $left: $sm);
+.px-2 {
+  @include spacing(padding, 0, 0, 0, $sm);
 }
 
-.px-md {
-  @include spacing(padding, $left: $md);
+.px-3 {
+  @include spacing(padding, 0, 0, 0, $md);
 }
 
-.px-lg {
-  @include spacing(padding, $left: $lg);
+.px-4 {
+  @include spacing(padding, 0, 0, 0, $lg);
 }
 
-.px-xlg {
-  @include spacing(padding, $left: $xlg);
-}
-
-.px-none {
-  @include spacing(padding, $left: 0);
+.px-5 {
+  @include spacing(padding, 0, 0, 0, $xlg);
 }
 
 /* padding spacing right */
-.py-xs {
-  @include spacing(padding, $right: $xs);
+.py-1 {
+  @include spacing(padding, 0, $xs, 0, 0);
 }
 
-.py-sm {
-  @include spacing(padding, $right: $sm);
+.py-2 {
+  @include spacing(padding, 0, $sm, 0, 0);
 }
 
-.py-md {
-  @include spacing(padding, $right: $md);
+.py-3 {
+  @include spacing(padding, 0, $md, 0, 0);
 }
 
-.py-lg {
-  @include spacing(padding, $right: $lg);
+.py-4 {
+  @include spacing(padding, 0, $lg, 0, 0);
 }
 
-.py-xlg {
-  @include spacing(padding, $right: $xlg);
+.py-5 {
+  @include spacing(padding, 0, $xlg, 0, 0);
 }
 
-.py-none {
-  @include spacing(padding, $right: 0);
+/* remove padding */
+.p-0 {
+  @include spacing(padding, 0, 0, 0, 0);
 }

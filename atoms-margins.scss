@@ -3,127 +3,117 @@
 @import "variables";
 @import "mixins";
 
+/* 
+  xy is for horizontal direction (x = left and y = right)
+  tb is for vertical direction (t = top and b = bottom)
+*/
+
 /* margin spacing around */
-.m-xs {
+.m-1 {
   @include spacing(margin, $xs, $xs, $xs, $xs);
 }
 
-.m-sm {
+.m-2 {
   @include spacing(margin, $sm, $sm, $sm, $sm);
 }
 
-.m-md {
+.m-3 {
   @include spacing(margin, $md, $md, $md, $md);
 }
 
-.m-lg {
+.m-4 {
   @include spacing(margin, $lg, $lg, $lg, $lg);
 }
 
-.m-xlg {
+.m-5 {
   @include spacing(margin, $xlg, $xlg, $xlg, $xlg);
 }
 
-.m-none {
-  @include spacing(margin, 0, 0, 0, 0);
-}
-
 /* margin spacing top */
-.mt-xs {
-  @include spacing(margin, $top: $xs);
+.mt-1 {
+  @include spacing(margin, $xs, 0, 0, 0);
 }
 
-.mt-sm {
-  @include spacing(margin, $top: $sm);
+.mt-2 {
+  @include spacing(margin, $sm, 0, 0, 0);
 }
 
-.mt-md {
-  @include spacing(margin, $top: $md);
+.mt-3 {
+  @include spacing(margin, $md, 0, 0, 0);
 }
 
-.mt-lg {
-  @include spacing(margin, $top: $lg);
+.mt-4 {
+  @include spacing(margin, $lg, 0, 0, 0);
 }
 
-.mt-xlg {
-  @include spacing(margin, $top: $xlg);
-}
-
-.mt-none {
-  @include spacing(margin, $top: 0);
+.mt-5 {
+  @include spacing(margin, $xlg, 0, 0, 0);
 }
 
 /* margin spacing bottom */
-.mb-xs {
-  @include spacing(margin, $bottom: $xs);
+.mb-1 {
+  @include spacing(margin, 0, 0, $xs, 0);
 }
 
-.mb-sm {
-  @include spacing(margin, $bottom: $sm);
+.mb-2 {
+  @include spacing(margin, 0, 0, $sm, 0);
 }
 
-.mb-md {
-  @include spacing(margin, $bottom: $md);
+.mb-3 {
+  @include spacing(margin, 0, 0, $md, 0);
 }
 
-.mb-lg {
-  @include spacing(margin, $bottom: $lg);
+.mb-4 {
+  @include spacing(margin, 0, 0, $lg, 0);
 }
 
-.mb-xlg {
-  @include spacing(margin, $bottom: $xlg);
-}
-
-.mb-none {
-  @include spacing(margin, $bottom: 0);
+.mb-5 {
+  @include spacing(margin, 0, 0, $xlg, 0);
 }
 
 /* margin spacing left */
-.mx-xs {
-  @include spacing(margin, $left: $xs);
+.mx-1 {
+  @include spacing(margin, 0, 0, 0, $xs);
 }
 
-.mx-sm {
-  @include spacing(margin, $left: $sm);
+.mx-2 {
+  @include spacing(margin, 0, 0, 0, $xs);
 }
 
-.mx-md {
-  @include spacing(margin, $left: $md);
+.mx-3 {
+  @include spacing(margin, 0, 0, 0, $sm);
 }
 
-.mx-lg {
-  @include spacing(margin, $left: $lg);
+.mx-4 {
+  @include spacing(margin, 0, 0, 0, $sm);
 }
 
-.mx-xlg {
-  @include spacing(margin, $left: $xlg);
-}
-
-.mx-none {
-  @include spacing(margin, $left: 0);
+.mx-5 {
+  @include spacing(margin, 0, 0, 0, $sm);
 }
 
 /* margin spacing right */
-.my-xs {
-  @include spacing(margin, $right: $xs);
+.my-1 {
+  @include spacing(margin, 0, $xs, 0, 0);
 }
 
-.my-sm {
-  @include spacing(margin, $right: $sm);
+.my-2 {
+  @include spacing(margin, 0, $sm, 0, 0);
 }
 
-.my-md {
-  @include spacing(margin, $right: $md);
+.my-3 {
+  @include spacing(margin, 0, $md, 0, 0);
 }
 
-.my-lg {
-  @include spacing(margin, $right: $lg);
+.my-4 {
+  @include spacing(margin, 0, $lg, 0, 0);
 }
 
-.my-xlg {
-  @include spacing(margin, $right: $xlg);
+.my-5 {
+  @include spacing(margin, 0, $xlg, 0, 0);
 }
 
-.my-none {
-  @include spacing(margin, $right: $xlg);
+/* remove margins */
+.m-0 {
+  @include spacing(margin, 0, 0, 0, 0);
 }

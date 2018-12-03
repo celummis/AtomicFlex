@@ -12,108 +12,81 @@
   @include position(absolute);
 }
 
-.pos-t-fixed {
+/* fixed header or footer */
+.pos-tfixed {
   @include position(fixed, $top: 0);
   z-index: 1000;
 }
 
-.pos-b-fixed {
+.pos-bfixed {
   @include position(fixed, $bottom: 0);
   z-index: 1000;
 }
 
-.pos-t-xs {
-  @include position(absolute, $top: $xs);
+/* top position */
+.pos-t {
+  @include position(absolute, 0, 0, 0, 0);
 }
 
-.pos-t-sm {
-  @include position(absolute, $top: $sm);
+.pos-t1 {
+  @include position(absolute, $xs, 0, 0, 0);
 }
 
-.pos-t-md {
-  @include position(absolute, $top: $md);
+.pos-t2 {
+  @include position(absolute, $sm, 0, 0, 0);
 }
 
-.pos-y-xs {
-  @include position(absolute, $right: $xs);
+.pos-t3 {
+  @include position(absolute, $md, 0, 0, 0);
 }
 
-.pos-y-sm {
-  @include position(absolute, $right: $sm);
+/* right position */
+.pos-y {
+  @include position(absolute, 0, 0, 0, 0);
 }
 
-.pos-y-md {
-  @include position(absolute, $right: $md);
+.pos-y1 {
+  @include position(absolute, 0, $xs, 0, 0);
 }
 
-.pos-b-xs {
-  @include position(absolute, $bottom: $xs);
+.pos-y2 {
+  @include position(absolute, 0, $sm, 0, 0);
 }
 
-.pos-b-sm {
-  @include position(absolute, $bottom: $sm);
+.pos-y3 {
+  @include position(absolute, 0, $md, 0, 0);
 }
 
-.pos-b-md {
-  @include position(absolute, $bottom: $md);
+/* bottom position */
+.pos-b {
+  @include position(absolute, 0, 0, 0, 0);
 }
 
-.pos-x-xs {
-  @include position(absolute, $left: $xs);
+.pos-b1 {
+  @include position(absolute, 0, 0, $xs, 0);
 }
 
-.pos-x-sm {
-  @include position(absolute, $left: $sm);
+.pos-b2 {
+  @include position(absolute, 0, 0, $sm, 0);
 }
 
-.pos-x-md {
-  @include position(absolute, $left: $md);
+.pos-b3 {
+  @include position(absolute, 0, 0, $md, 0);
 }
 
-.pos-ty-xs {
-  @include position(absolute, $xs, $xs, 0, 0);
+/* left position */
+.pos-b {
+  @include position(absolute, 0, 0, 0, 0);
 }
 
-.pos-ty-sm {
-  @include position(absolute, $sm, $sm, 0, 0);
+.pos-b1 {
+  @include position(absolute, 0, 0, $xs, 0);
 }
 
-.pos-ty-md {
-  @include position(absolute, $md, $md, 0, 0);
+.pos-b2 {
+  @include position(absolute, 0, 0, $sm, 0);
 }
 
-.pos-tx-xs {
-  @include position(absolute, $xs, 0, 0, $xs);
-}
-
-.pos-tx-sm {
-  @include position(absolute, $sm, 0, 0, $sm);
-}
-
-.pos-tx-md {
-  @include position(absolute, $md, 0, 0, $md);
-}
-
-.pos-by-xs {
-  @include position(absolute, 0, $xs, $xs, 0);
-}
-
-.pos-by-sm {
-  @include position(absolute, 0, $sm, $sm, 0);
-}
-
-.pos-by-md {
-  @include position(absolute, 0, $md, $md, 0);
-}
-
-.pos-bx-xs {
-  @include position(absolute, 0, 0, $xs, $xs);
-}
-
-.pos-bx-sm {
-  @include position(absolute, 0, 0, $sm, $sm);
-}
-
-.pos-bx-md {
-  @include position(absolute, 0, 0, $md, $md);
+.pos-b3 {
+  @include position(absolute, 0, 0, $md, 0);
 }
