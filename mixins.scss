@@ -254,8 +254,8 @@
     @if $type == rounded-bottom-left {
         border-bottom-left-radius: $size;
     }
-    @if $type == rounded-top-right {
-        border-bottom-left-radius: $size;
+    @if $type == rounded-bottom-right {
+        border-bottom-right-radius: $size;
     }
     @if $type == none {
         border-radius: $size;

@@ -2065,6 +2065,10 @@ a {
   border-right-style: solid;
 }
 
+.b-none {
+  border: none;
+}
+
 /* border radius */
 .r-1 {
   border-radius: 4px;
@@ -2214,27 +2218,22 @@ a {
 /* border radius top right */
 .rty-1 {
   border-top-right-radius: 4px;
-  border-bottom-left-radius: 4px;
 }
 
 .rty-2 {
   border-top-right-radius: 8px;
-  border-bottom-left-radius: 8px;
 }
 
 .rty-3 {
   border-top-right-radius: 16px;
-  border-bottom-left-radius: 16px;
 }
 
 .rty-4 {
   border-top-right-radius: 32px;
-  border-bottom-left-radius: 32px;
 }
 
 .rty-5 {
   border-top-right-radius: 64px;
-  border-bottom-left-radius: 64px;
 }
 
 /* border radius bottom left */
@@ -2259,3 +2258,22 @@ a {
 }
 
 /* border radius bottom right */
+.rby-1 {
+  border-bottom-right-radius: 4px;
+}
+
+.rby-2 {
+  border-bottom-right-radius: 8px;
+}
+
+.rby-3 {
+  border-bottom-right-radius: 16px;
+}
+
+.rby-4 {
+  border-bottom-right-radius: 32px;
+}
+
+.rby-5 {
+  border-bottom-right-radius: 64px;
+}
