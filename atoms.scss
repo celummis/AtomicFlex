@@ -1,6 +1,6 @@
 // _atoms.scss
 
-// Color Variables (use lighten or darken to change color value)
+// Color Variables (use lighten, darken or mix to change color)
 $primary: #1A7EAD;
 $secondary: #AD8B1A;
 $accent: #3A1AAD;
@@ -10,16 +10,6 @@ $black: #1A1A1A;
 $alarm: #AD1A2D;
 $warning: #E39B35;
 $success: #17A63A;
-
-// Typography
-$base-font: 'Montserrat', sans-serif;
-$base-size: 16px;
-$base-scale: 1.5;
-
-@function calculate-font($size) {
-  $font-size: $size/$base-size;
-  @return $font-size * 1rem;
-}
 
 // Spacing based on 8px grid
 $xs: 4px;
@@ -77,97 +67,358 @@ $r-md: 16px;
 $r-lg: 32px;
 $r-xlg: 64px;
 
-// Typography mixin
+// Typography size mixin
 @mixin font-size($size) {
-	font-size: calculate-font($size);
+  font-size: calculate-font($size);
 }
 
 // Typography style mixin
-@mixin font-style($color: null, $weight: null, $style: null, $position: null, $case: null, $line-height: null) {
-  @if $color { color: $color; }
-  @if $weight { font-weight: $weight; }
-  @if $style { font-style: $style }
-  @if $position { text-align: $position }
-  @if $case { text-transform: $case }
-  @if $line-height { line-height: $line-height; }
-}
-
-// typography wrap mixin
-@mixin type-wrap($value) {
-	@if $value == nowrap {
-      white-space: nowrap;
+@mixin text($type: null) {
+  @if $type==primary {
+    color: $primary;
   }
-  @if $value == pre {
-      white-space: pre;
+  @if $type==secondary {
+    color: $secondary;
   }
-  @if $value == pre-line {
-      white-space: pre-line;
+  @if $type==accent {
+    color: $accent;
   }
-  @if $value == pre-wrap {
-      white-space: pre-wrap;
+  @if $type==bold {
+    font-weight: bold;
   }
-  @if $value == break-word {
-      word-wrap: break-word;
+  @if $type==italic {
+    font-style: italic;
   }
-  @if $value == truncate {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+  @if $type==upper {
+    text-transform: uppercase;
   }
-  @if $value == normal {
-      white-space: normal;
-      word-wrap: normal;
-	}
+  @if $type==capital {
+    text-transform: capitalize;
+  }
+  @if $type==underline {
+    text-decoration: underline;
+  }
+  @if $type==center {
+    text-align: center;
+  }
+  @if $type==left {
+    text-align: left;
+  }
+  @if $type==right {
+    text-align: right;
+  }
 }
 
 // spacing mixin
-@mixin spacing($type: null, $top: null, $right: null, $bottom: null, $left: null) {
-	@if $type == margin {
-    margin-top: $top;
-    margin-bottom: $bottom;
-    margin-left: $left;
-    margin-right: $right;
-	}
-	@if $type == padding {
-    padding-top: $top;
-    padding-bottom: $bottom;
-    padding-left: $left;
-    padding-right: $right;
-	}
-}
-
-// position mixins
-@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
-  position: $position;
-  top: $top;
-  right: $right;
-  bottom: $bottom;
-  left: $left;
+@mixin spacing($type: null) {
+  //margin
+  @if $type==m-0 {
+    margin: 0;
+  }
+  @if $type==m-1 {
+    margin: $xs;
+  }
+  @if $type==m-2 {
+    margin: $sm;
+  }
+  @if $type==m-3 {
+    margin: $md;
+  }
+  @if $type==m-4 {
+    margin: $lg;
+  }
+  @if $type==m-5 {
+    margin: $xlg;
+  }
+  @if $type==mt-0 {
+    margin-top: 0;
+  }
+  @if $type==mt-1 {
+    margin-top: $xs;
+  }
+  @if $type==mt-2 {
+    margin-top: $sm;
+  }
+  @if $type==mt-3 {
+    margin-top: $md;
+  }
+  @if $type==mt-4 {
+    margin-top: $lg;
+  }
+  @if $type==mt-5 {
+    margin-top: $xlg;
+  }
+  @if $type==mb-0 {
+    margin-bottom: 0;
+  }
+  @if $type==mb-1 {
+    margin-bottom: $xs;
+  }
+  @if $type==mb-2 {
+    margin-bottom: $sm;
+  }
+  @if $type==mb-3 {
+    margin-bottom: $md;
+  }
+  @if $type==mb-4 {
+    margin-bottom: $lg;
+  }
+  @if $type==mb-5 {
+    margin-bottom: $xlg;
+  }
+  @if $type==ml-0 {
+    margin-left: 0;
+  }
+  @if $type==ml-1 {
+    margin-left: $xs;
+  }
+  @if $type==ml-2 {
+    margin-left: $sm;
+  }
+  @if $type==ml-3 {
+    margin-left: $md;
+  }
+  @if $type==ml-4 {
+    margin-left: $lg;
+  }
+  @if $type==ml-5 {
+    margin-left: $xlg;
+  }
+  @if $type==mr-0 {
+    margin-right: 0;
+  }
+  @if $type==mr-1 {
+    margin-right: $xs;
+  }
+  @if $type==mr-2 {
+    margin-right: $sm;
+  }
+  @if $type==mr-3 {
+    margin-right: $md;
+  }
+  @if $type==mr-4 {
+    margin-right: $lg;
+  }
+  @if $type==mr-5 {
+    margin-right: $xlg;
+  }
+  @if $type==mx-0 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  @if $type==mx-1 {
+    margin-left: $xs;
+    margin-right: $xs;
+  }
+  @if $type==mx-2 {
+    margin-left: $sm;
+    margin-right: $sm;
+  }
+  @if $type==mx-3 {
+    margin-left: $md;
+    margin-right: $md;
+  }
+  @if $type==mx-4 {
+    margin-left: $lg;
+    margin-right: $lg;
+  }
+  @if $type==mx-5 {
+    margin-left: $xlg;
+    margin-right: $xlg;
+  }
+  @if $type==my-0 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  @if $type==my-1 {
+    margin-top: $xs;
+    margin-bottom: $xs;
+  }
+  @if $type==my-2 {
+    margin-top: $sm;
+    margin-bottom: $sm;
+  }
+  @if $type==my-3 {
+    margin-top: $md;
+    margin-bottom: $md;
+  }
+  @if $type==my-4 {
+    margin-top: $lg;
+    margin-bottom: $lg;
+  }
+  @if $type==my-5 {
+    margin-top: $xlg;
+    margin-bottom: $xlg;
+  }
+  //padding
+  @if $type==p-0 {
+    padding-top: 0;
+  }
+  @if $type==p-1 {
+    padding: $xs;
+  }
+  @if $type==p-2 {
+    padding: $sm;
+  }
+  @if $type==p-3 {
+    padding: $md;
+  }
+  @if $type==p-4 {
+    padding: $lg;
+  }
+  @if $type==p-5 {
+    padding: $xlg;
+  }
+  @if $type==pt-0 {
+    padding-top: 0;
+  }
+  @if $type==pt-1 {
+    padding-top: $xs;
+  }
+  @if $type==pt-2 {
+    padding-top: $sm;
+  }
+  @if $type==pt-3 {
+    padding-top: $md;
+  }
+  @if $type==pt-4 {
+    padding-top: $lg;
+  }
+  @if $type==pt-5 {
+    padding-top: $xlg;
+  }
+  @if $type==pb-0 {
+    padding-bottom: 0;
+  }
+  @if $type==pb-1 {
+    padding-bottom: $xs;
+  }
+  @if $type==pb-2 {
+    padding-bottom: $sm;
+  }
+  @if $type==pb-3 {
+    padding-bottom: $md;
+  }
+  @if $type==pb-4 {
+    padding-bottom: $lg;
+  }
+  @if $type==pb-5 {
+    padding-bottom: $xlg;
+  }
+  @if $type==pl-0 {
+    padding-left: 0;
+  }
+  @if $type==pl-1 {
+    padding-left: $xs;
+  }
+  @if $type==pl-2 {
+    padding-left: $sm;
+  }
+  @if $type==pl-3 {
+    padding-left: $md;
+  }
+  @if $type==pl-4 {
+    padding-left: $lg;
+  }
+  @if $type==pl-5 {
+    padding-left: $xlg;
+  }
+  @if $type==pr-0 {
+    padding-right: 0;
+  }
+  @if $type==pr-1 {
+    padding-right: $xs;
+  }
+  @if $type==pr-2 {
+    padding-right: $sm;
+  }
+  @if $type==pr-3 {
+    padding-right: $md;
+  }
+  @if $type==pr-4 {
+    padding-right: $lg;
+  }
+  @if $type==pr-5 {
+    padding-right: $xlg;
+  }
+  @if $type==px-0 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  @if $type==px-1 {
+    padding-left: $xs;
+    padding-right: $xs;
+  }
+  @if $type==px-2 {
+    padding-left: $sm;
+    padding-right: $sm;
+  }
+  @if $type==px-3 {
+    padding-left: $md;
+    padding-right: $md;
+  }
+  @if $type==px-4 {
+    padding-left: $lg;
+    padding-right: $lg;
+  }
+  @if $type==px-5 {
+    padding-left: $xlg;
+    padding-right: $xlg;
+  }
+  @if $type==py-0 {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  @if $type==py-1 {
+    padding-top: $xs;
+    padding-bottom: $xs;
+  }
+  @if $type==py-2 {
+    padding-top: $sm;
+    padding-bottom: $sm;
+  }
+  @if $type==py-3 {
+    padding-top: $md;
+    padding-bottom: $md;
+  }
+  @if $type==py-4 {
+    padding-top: $lg;
+    padding-bottom: $lg;
+  }
+  @if $type==py-5 {
+    padding-top: $xlg;
+    padding-bottom: $xlg;
+  }
 }
 
 // flexbox grid mixins
 @mixin grid($direction: null, $wrap: null, $justify: null, $items: null, $content: null) {
   display: -webkit-flex;
   display: flex;
+
   @if $direction {
-      -webkit-flex-direction: $direction;
-      flex-direction: $direction;
+    -webkit-flex-direction: $direction;
+    flex-direction: $direction;
   }
+
   @if $wrap {
-      -webkit-flex-wrap: $wrap;
-      flex-wrap: $wrap;
+    -webkit-flex-wrap: $wrap;
+    flex-wrap: $wrap;
   }
+
   @if $justify {
-      -webkit-justify-content: $justify;
-      justify-content: $justify;
+    -webkit-justify-content: $justify;
+    justify-content: $justify;
   }
+
   @if $items {
-      -webkit-align-items: $items;
-      align-items: $items;
+    -webkit-align-items: $items;
+    align-items: $items;
   }
+
   @if $content {
-      -webkit-align-content: $content;
-      align-content: $content;
+    -webkit-align-content: $content;
+    align-content: $content;
   }
 }
 
@@ -177,184 +428,224 @@ $r-xlg: 64px;
   -webkit-flex-shrink: $shrink;
   flex-shrink: $shrink;
   width: $width;
+
   @if $self {
-      -webkit-align-self: $self;
-      align-self: $self;
+    -webkit-align-self: $self;
+    align-self: $self;
   }
+
   @if $order {
-      -webkit-order: $order;
-      order: $order;
+    -webkit-order: $order;
+    order: $order;
   }
 }
 
 // layout helper mixin
 @mixin layout($type: null) {
-  @if $type == block {
-      display: block;
+  @if $type==block {
+    display: block;
   }
-  @if $type == inline {
-      display: inline-block;
+
+  @if $type==inline {
+    display: inline-block;
   }
-  @if $type == left {
-      float: left;
+
+  @if $type==left {
+    float: left;
   }
-  @if $type == right {
-      float: right;
+
+  @if $type==right {
+    float: right;
   }
-  @if $type == center {
-      display: block;
-      margin: 0 auto;
+
+  @if $type==center {
+    display: block;
+    margin: 0 auto;
   }
-  @if $type == clear {
-      clear: both;
-      display: block;
+
+  @if $type==clear {
+    clear: both;
+    display: block;
   }
-  @if $type == hidden {
-      visibility: hidden;
+
+  @if $type==hidden {
+    visibility: hidden;
   }
-  @if $type == hide {
-      display: none;
+
+  @if $type==hide {
+    display: none;
   }
-  @if $type == show {
-      visibility: visible;
-      display: block;
+
+  @if $type==show {
+    display: block;
   }
-  @if $type == reveal {
+
+  @if $type==reveal {
     visibility: visible;
   }
-  @if $type == top {
-      vertical-align: top;
+
+  @if $type==top {
+    vertical-align: top;
   }
-  @if $type == middle {
-      vertical-align: middle;
+
+  @if $type==middle {
+    vertical-align: middle;
   }
-  @if $type == bottom {
-      vertical-align: bottom;
+
+  @if $type==bottom {
+    vertical-align: bottom;
   }
-  @if $type == overflow {
-      overflow: auto;
+
+  @if $type==overflow {
+    overflow: auto;
   }
-  @if $type == overflow-x {
-      overflow-x: auto;
+
+  @if $type==overflow-x {
+    overflow-x: auto;
   }
-  @if $type == overflow-y {
-      overflow-y: auto;
+
+  @if $type==overflow-y {
+    overflow-y: auto;
   }
-  @if $type == scroll {
-      overflow: scroll;
+
+  @if $type==scroll {
+    overflow: scroll;
   }
-  @if $type == scroll-x {
-      overflow-x: scroll;
+
+  @if $type==scroll-x {
+    overflow-x: scroll;
   }
-  @if $type == scroll-y {
-      overflow-y: scroll;
+
+  @if $type==scroll-y {
+    overflow-y: scroll;
   }
-  @if $type == overflow-hidden {
-      overflow: hidden;
+
+  @if $type==overflow-hidden {
+    overflow: hidden;
   }
-  @if $type == overflow-x-hidden {
-      overflow-x: hidden;
+
+  @if $type==overflow-x-hidden {
+    overflow-x: hidden;
   }
-  @if $type == overflow-y-hidden {
-      overflow-y: hidden;
+
+  @if $type==overflow-y-hidden {
+    overflow-y: hidden;
   }
 }
 
 // border mixin
 @mixin border($type: null, $size: null, $style: null, $radius: null) {
-  @if $type == square {
-       border-width: $size; 
-       border-style: $style;
+  @if $type==square {
+    border-width: $size;
+    border-style: $style;
   }
-  @if $type == ladder {
-      border-top-width: $size; 
-      border-bottom-width: $size; 
-      border-top-style: $style;
-      border-bottom-style: $style;
+
+  @if $type==ladder {
+    border-top-width: $size;
+    border-bottom-width: $size;
+    border-top-style: $style;
+    border-bottom-style: $style;
   }
-  @if $type == fence {
-      border-left-width: $size; 
-      border-right-width: $size; 
-      border-left-style: $style;
-      border-right-style: $style;
+
+  @if $type==fence {
+    border-left-width: $size;
+    border-right-width: $size;
+    border-left-style: $style;
+    border-right-style: $style;
   }
-  @if $type == top {
-      border-top-width: $size; 
-      border-top-style: $style;
+
+  @if $type==top {
+    border-top-width: $size;
+    border-top-style: $style;
   }
-  @if $type == right {
-      border-right-width: $size; 
-      border-right-style: $style;
+
+  @if $type==right {
+    border-right-width: $size;
+    border-right-style: $style;
   }
-  @if $type == bottom {
-      border-bottom-width: $size; 
-      border-bottom-style: $style;
+
+  @if $type==bottom {
+    border-bottom-width: $size;
+    border-bottom-style: $style;
   }
-  @if $type == left {
-      border-left-width: $size; 
-      border-left-style: $style;
+
+  @if $type==left {
+    border-left-width: $size;
+    border-left-style: $style;
   }
-  @if $type == none {
-      border-width: 0; 
-      border-style: none;
+
+  @if $type==none {
+    border-width: 0;
+    border-style: none;
   }
-  
+
 }
 
 @mixin radius($type: null, $size: null) {
-  @if $type == rounded {
-      border-radius: $size;
+  @if $type==rounded {
+    border-radius: $size;
   }
-  @if $type == rounded-top {
-      border-top-left-radius: $size;
-      border-top-right-radius: $size;
+
+  @if $type==rounded-top {
+    border-top-left-radius: $size;
+    border-top-right-radius: $size;
   }
-  @if $type == rounded-bottom {
-      border-bottom-left-radius: $size;
-      border-bottom-right-radius: $size;
+
+  @if $type==rounded-bottom {
+    border-bottom-left-radius: $size;
+    border-bottom-right-radius: $size;
   }
-  @if $type == rounded-left {
-      border-top-left-radius: $size;
-      border-bottom-left-radius: $size;
+
+  @if $type==rounded-left {
+    border-top-left-radius: $size;
+    border-bottom-left-radius: $size;
   }
-  @if $type == rounded-right {
-      border-top-right-radius: $size;
-      border-bottom-right-radius: $size;
+
+  @if $type==rounded-right {
+    border-top-right-radius: $size;
+    border-bottom-right-radius: $size;
   }
-  @if $type == rounded-top-left {
-      border-top-left-radius: $size;
+
+  @if $type==rounded-top-left {
+    border-top-left-radius: $size;
   }
-  @if $type == rounded-top-right {
-      border-top-right-radius: $size;
+
+  @if $type==rounded-top-right {
+    border-top-right-radius: $size;
   }
-  @if $type == rounded-bottom-left {
-      border-bottom-left-radius: $size;
+
+  @if $type==rounded-bottom-left {
+    border-bottom-left-radius: $size;
   }
-  @if $type == rounded-bottom-right {
-      border-bottom-right-radius: $size;
+
+  @if $type==rounded-bottom-right {
+    border-bottom-right-radius: $size;
   }
-  @if $type == none {
-      border-radius: $size;
+
+  @if $type==none {
+    border-radius: $size;
   }
 }
 
 // background mixin
 @mixin background($type: null, $value: null) {
-  @if $type == color {
-      background: $value;
+  @if $type==color {
+    background: $value;
   }
-  @if $type == image {
-      background: $value no-repeat;
+
+  @if $type==image {
+    background: $value no-repeat;
   }
 }
 
 // shadows mixin
 @mixin shadow($type: null, $horizontal: 1px, $vertical: 1px, $blur: 3px, $spread: 3px, $color: null) {
-  @if $type == inner {
-      box-shadow: inset $horizontal $vertical $blur $spread $color;
+  @if $type==inner {
+    box-shadow: inset $horizontal $vertical $blur $spread $color;
   }
-  @if $type == outer {
-      box-shadow: $horizontal $vertical $blur $spread $color;
+
+  @if $type==outer {
+    box-shadow: $horizontal $vertical $blur $spread $color;
   }
 }
 
@@ -366,50 +657,60 @@ $r-xlg: 64px;
 
 // tables mixin
 @mixin table($type: null, $header: null, $color: null, $alt: null) {
-  @if $type == standard {
-      thead th,
-      tfoot td {
-          background: $header;
-      }
-      tbody td {
-          @include border(box, 1px, solid, $color);
-      }
+  @if $type==standard {
+
+    thead th,
+    tfoot td {
+      background: $header;
+    }
+
+    tbody td {
+      @include border(box, 1px, solid, $color);
+    }
   }
-  @if $type == ladder {
-      thead th,
-      tfoot td {
-          background: $header;
-      }
-      tbody td {
-          @include border(ladder, 1px, solid, $color);
-      }
+
+  @if $type==ladder {
+
+    thead th,
+    tfoot td {
+      background: $header;
+    }
+
+    tbody td {
+      @include border(ladder, 1px, solid, $color);
+    }
   }
-  @if $type == zebra {
-      thead th, 
-      tfoot td {
-          background: $header;
-      }
-      tbody tr:even td {
-          background: $alt;
-      }
+
+  @if $type==zebra {
+
+    thead th,
+    tfoot td {
+      background: $header;
+    }
+
+    tbody tr:even td {
+      background: $alt;
+    }
   }
 }
 
 // lists
 @mixin list($type: null, $color: null, $alt: null) {
-  @if $type == bullet {
-      li {
-          list-style: disc;
-      }
+  @if $type==bullet {
+    li {
+      list-style: disc;
+    }
   }
-  @if $type == ladder {
-      li {
-          @include border(ladder, 1px, solid, $color);
-      }
+
+  @if $type==ladder {
+    li {
+      @include border(ladder, 1px, solid, $color);
+    }
   }
-  @if $type == zebra {
-      li {
-          background: $alt;
-      }
+
+  @if $type==zebra {
+    li {
+      background: $alt;
+    }
   }
 }
