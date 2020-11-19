@@ -391,197 +391,236 @@ $r-xlg: 64px;
   }
 }
 
-// flexbox grid mixins
-@mixin grid($direction: null, $wrap: null, $justify: null, $items: null, $content: null) {
-  display: -webkit-flex;
-  display: flex;
-
-  @if $direction {
-    -webkit-flex-direction: $direction;
-    flex-direction: $direction;
+// flexbox grid container defaults (row, nowrap, justify-start, items-stretch, content-start)
+// Use additional $type options to change container defaults 
+@mixin flex($type: null) {
+  @if $type==row {
+    display: flex;
   }
-
-  @if $wrap {
-    -webkit-flex-wrap: $wrap;
-    flex-wrap: $wrap;
+  @if $type==row-reverse {
+    display: flex;
+    flex-direction: row-reverse;
   }
-
-  @if $justify {
-    -webkit-justify-content: $justify;
-    justify-content: $justify;
+  @if $type==column {
+    display: flex;
+    flex-direction: column;
   }
-
-  @if $items {
-    -webkit-align-items: $items;
-    align-items: $items;
+  @if $type==column-reverse {
+    display: flex;
+    flex-direction: column-reverse;
   }
-
-  @if $content {
-    -webkit-align-content: $content;
-    align-content: $content;
+  @if $type==wrap {
+    flex-wrap: wrap;
+  }
+  @if $type==wrap-reverse {
+    flex-wrap: wrap-reverse;
+  }
+  @if $type==wrap-reverse {
+    flex-wrap: wrap-reverse;
+  }
+  @if $type==justify-end {
+    justify-content: flex-end;
+  }
+  @if $type==justify-center {
+    justify-content: center;
+  }
+  @if $type==justify-between {
+    justify-content: space-between;
+  }
+  @if $type==justify-around {
+    justify-content: space-around;
+  }
+  @if $type==items-start {
+    align-items: flex-start;
+  }
+  @if $type==items-end {
+    align-items: flex-end;
+  }
+  @if $type==items-center {
+    align-items: center;
+  }
+  @if $type==content-end {
+    align-content: flex-end;
+  }
+  @if $type==content-end {
+    align-content: flex-end;
+  }
+  @if $type==content-center {
+    align-content: center;
+  }
+  @if $type==content-between {
+    align-content: space-between;
+  }
+  @if $type==content-around {
+    align-content: space-around;
   }
 }
 
-@mixin column($width: auto, $grow: 0, $shrink: 1, $self: null, $order: null) {
-  -webkit-flex-grow: $grow;
-  flex-grow: $grow;
-  -webkit-flex-shrink: $shrink;
-  flex-shrink: $shrink;
-  width: $width;
-
-  @if $self {
-    -webkit-align-self: $self;
-    align-self: $self;
+// flexbox column grid uses defaults the variable is Column Size
+@mixin columns($size: null) {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  @if $type==one {
+    width: $c-1;
   }
-
-  @if $order {
-    -webkit-order: $order;
-    order: $order;
+  @if $type==two {
+    width: $c-2;
+  }
+  @if $type==three {
+    width: $c-3;
+  }
+  @if $type==four {
+    width: $c-4;
+  }
+  @if $type==five {
+    width: $c-5;
+  }
+  @if $type==six {
+    width: $c-6;
+  }
+  @if $type==seven {
+    width: $c-7;
+  }
+  @if $type==eight {
+    width: $c-8;
+  }
+  @if $type==nine {
+    width: $c-9;
+  }
+  @if $type==ten {
+    width: $c-10;
+  }
+  @if $type==eleven {
+    width: $c-11;
+  }
+  @if $type==twelve {
+    width: $c-12;
   }
 }
 
-// layout helper mixin
+// layout mixin
 @mixin layout($type: null) {
   @if $type==block {
     display: block;
   }
-
   @if $type==inline {
     display: inline-block;
   }
-
   @if $type==left {
     float: left;
   }
-
   @if $type==right {
     float: right;
   }
-
   @if $type==center {
     display: block;
     margin: 0 auto;
   }
-
   @if $type==clear {
     clear: both;
     display: block;
   }
+}
 
-  @if $type==hidden {
-    visibility: hidden;
-  }
-
+// visibility mixin
+@mixin visibility($type: null) {
   @if $type==hide {
     display: none;
   }
-
   @if $type==show {
     display: block;
   }
-
+  @if $type==hidden {
+    visibility: hidden;
+  }
   @if $type==reveal {
     visibility: visible;
   }
+}
 
+// alignment mixin
+@mixin visibility($type: null) {
   @if $type==top {
     vertical-align: top;
   }
-
   @if $type==middle {
     vertical-align: middle;
   }
-
   @if $type==bottom {
     vertical-align: bottom;
   }
+}
 
+// overflow mixin
+@mixin visibility($type: null) {
   @if $type==overflow {
     overflow: auto;
   }
-
   @if $type==overflow-x {
     overflow-x: auto;
   }
-
   @if $type==overflow-y {
     overflow-y: auto;
   }
-
-  @if $type==scroll {
-    overflow: scroll;
-  }
-
-  @if $type==scroll-x {
-    overflow-x: scroll;
-  }
-
-  @if $type==scroll-y {
-    overflow-y: scroll;
-  }
-
   @if $type==overflow-hidden {
     overflow: hidden;
   }
-
   @if $type==overflow-x-hidden {
     overflow-x: hidden;
   }
-
   @if $type==overflow-y-hidden {
     overflow-y: hidden;
   }
+  @if $type==scroll {
+    overflow: scroll;
+  }
+  @if $type==scroll-x {
+    overflow-x: scroll;
+  }
+  @if $type==scroll-y {
+    overflow-y: scroll;
+  }
 }
 
-// border mixin
-@mixin border($type: null, $size: null, $style: null, $radius: null) {
-  @if $type==square {
-    border-width: $size;
-    border-style: $style;
+// background mixin
+@mixin background($type: null, $value: null) {
+  @if $type==color {
+    background: $value;
   }
 
-  @if $type==ladder {
-    border-top-width: $size;
-    border-bottom-width: $size;
-    border-top-style: $style;
-    border-bottom-style: $style;
+  @if $type==image {
+    background: $value no-repeat;
   }
-
-  @if $type==fence {
-    border-left-width: $size;
-    border-right-width: $size;
-    border-left-style: $style;
-    border-right-style: $style;
-  }
-
-  @if $type==top {
-    border-top-width: $size;
-    border-top-style: $style;
-  }
-
-  @if $type==right {
-    border-right-width: $size;
-    border-right-style: $style;
-  }
-
-  @if $type==bottom {
-    border-bottom-width: $size;
-    border-bottom-style: $style;
-  }
-
-  @if $type==left {
-    border-left-width: $size;
-    border-left-style: $style;
-  }
-
-  @if $type==none {
-    border-width: 0;
-    border-style: none;
-  }
-
 }
 
+// border mixin 
+@mixin border($type: null, $size: null, $style: null, $color: null) {
+  @if $type==no-border {
+    border: 0;
+  }
+  @if $type==border {
+    border: $size $style $color;
+  }
+  @if $type==border-top {
+    border: $size $style $color;
+  }
+  @if $type==border-bottom {
+    border: $size $style $color;
+  }
+  @if $type==border-left {
+    border: $size $style $color;
+  }
+  @if $type==border-right {
+    border: $size $style $color;
+  }
+}
+
+// radius mixin 
 @mixin radius($type: null, $size: null) {
+  @if $type==none {
+    border-radius: 0;
+  }
   @if $type==rounded {
     border-radius: $size;
   }
@@ -621,96 +660,21 @@ $r-xlg: 64px;
   @if $type==rounded-bottom-right {
     border-bottom-right-radius: $size;
   }
-
-  @if $type==none {
-    border-radius: $size;
-  }
-}
-
-// background mixin
-@mixin background($type: null, $value: null) {
-  @if $type==color {
-    background: $value;
-  }
-
-  @if $type==image {
-    background: $value no-repeat;
-  }
 }
 
 // shadows mixin
-@mixin shadow($type: null, $horizontal: 1px, $vertical: 1px, $blur: 3px, $spread: 3px, $color: null) {
+@mixin shadow($type: null, $horizontal: null, $vertical: null, $blur: null, $spread: null, $color: null, $opacity: null) {
   @if $type==inner {
-    box-shadow: inset $horizontal $vertical $blur $spread $color;
+    box-shadow: inset $horizontal $vertical $blur $spread rgba($color, $opacity);
   }
 
   @if $type==outer {
-    box-shadow: $horizontal $vertical $blur $spread $color;
+    box-shadow: $horizontal $vertical $blur $spread rgba($color, $opacity);
   }
 }
 
 // opacity mixin
-@mixin opacity($color: #000000, $value: .5) {
-  opacity: $value;
+@mixin opacity($color: null, $value: null) {
   background: $color;
-}
-
-// tables mixin
-@mixin table($type: null, $header: null, $color: null, $alt: null) {
-  @if $type==standard {
-
-    thead th,
-    tfoot td {
-      background: $header;
-    }
-
-    tbody td {
-      @include border(box, 1px, solid, $color);
-    }
-  }
-
-  @if $type==ladder {
-
-    thead th,
-    tfoot td {
-      background: $header;
-    }
-
-    tbody td {
-      @include border(ladder, 1px, solid, $color);
-    }
-  }
-
-  @if $type==zebra {
-
-    thead th,
-    tfoot td {
-      background: $header;
-    }
-
-    tbody tr:even td {
-      background: $alt;
-    }
-  }
-}
-
-// lists
-@mixin list($type: null, $color: null, $alt: null) {
-  @if $type==bullet {
-    li {
-      list-style: disc;
-    }
-  }
-
-  @if $type==ladder {
-    li {
-      @include border(ladder, 1px, solid, $color);
-    }
-  }
-
-  @if $type==zebra {
-    li {
-      background: $alt;
-    }
-  }
+  opacity: $value;
 }
