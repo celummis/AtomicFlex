@@ -1,6 +1,8 @@
 // _atoms.scss
 
 // Color Variables (use lighten, darken or mix to change color)
+// If you need to lighten a color - lighten($primary, 30%); 
+// If you need to darken a color - darken($secondary, 70%);
 $primary: #1A7EAD;
 $secondary: #AD8B1A;
 $accent: #3A1AAD;
@@ -11,7 +13,7 @@ $alarm: #AD1A2D;
 $warning: #E39B35;
 $success: #17A63A;
 
-// Spacing based on 8px grid
+// Spacing based on 8px grid and 16px font size
 $xs: 4px;
 $sm: 8px;
 $md: 16px;
@@ -67,9 +69,15 @@ $r-md: 16px;
 $r-lg: 32px;
 $r-xlg: 64px;
 
-// Typography size mixin
-@mixin font-size($size) {
-  font-size: calculate-font($size);
+// Calculate function for typograpgy px to rem 
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+// Mixin calling typograpgy calculate function
+@mixin fontSize($size) {
+  font-size: calculateRem($size);
 }
 
 // Typography style mixin
